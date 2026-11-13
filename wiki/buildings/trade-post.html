@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trade Post — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../buildings/index.html">Buildings</a> › Trade and defence</p>
+<!-- /generated -->
+<h1>Trade Post</h1>
+
+<!-- generated: building:trade_post -->
+<table class="facts">
+<tbody>
+<tr><th>Costs</th><td>24 planks, 12 ashlars</td></tr>
+<tr><th>Building work</th><td>360 work units, the material paid in 2 stages; up to 2 builders at once — about 6 min for one builder with a hammer</td></tr>
+<tr><th>Posts</th><td>1 worker</td></tr>
+<tr><th>Trades</th><td>with the nearest connected village whose gate lies within 96 blocks as the crow flies and is reached over finished roads</td></tr>
+<tr><th>A trip</th><td>twice the way to the gate and 4 min more; up to 16 units of goods, at least one whole lot</td></tr>
+<tr><th>A village sells</th><td>4 loaves for 1 emerald, 4 fish for 1 emerald, 6 fuel for 1 emerald, 1 iron ingot for 1 emerald, 4 iron ores for 1 emerald, 8 wheat for 1 emerald</td></tr>
+<tr><th>Needs</th><td>the ground may vary by up to 2 blocks over the site</td></tr>
+<tr><th>Versions</th><td>Standard</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p>The trade post trades with a village. Its one worker, the <strong>trader</strong>, walks over your roads
+to the <a href="village-gate.html">gate</a> of a <a href="../land/villages.html">connected village</a>, sells
+what the settlement has to spare and buys what you have set a target for, and pays in
+<strong>emeralds</strong>. It is the only way emeralds come into a settlement and the only thing that spends
+them.</p>
+
+<h2 id="who-it-trades-with">Who it trades with</h2>
+
+<p><strong>A trade post trades with the nearest connected village it can reach.</strong> The village has to be
+connected to your settlement, its gate has to lie within reach of the post in a straight line — the number is in the table above — and a finished road of yours has to lead from the post to that gate. If several qualify,
+the nearest one is the partner. Without one it stands still and says why:</p>
+
+<ul>
+<li><em>“X has nobody to trade with: no village is connected to the settlement.”</em> — connect one with a
+  <a href="village-gate.html">village gate</a>.</li>
+<li><em>“X has nobody to trade with: no connected village lies within its reach.”</em> — build a post nearer
+  to the gate.</li>
+<li><em>“X has nobody to trade with: no road leads from it to the gate of a connected village.”</em> — draw
+  one.</li>
+<li><em>“X has nobody to trade with: its village is recovering from a lost raid and trades with nobody for a
+  few days.”</em> — a waiting message; the trade comes back by itself, see
+  <a href="../land/raids.html#a-raid-on-a-village">Raids</a>.</li>
+</ul>
+
+<h2 id="a-trip">A trip</h2>
+
+<p><strong>A trip takes twice the way to the gate and a fixed time on top.</strong> The trader loads whole lots
+— as many units as the village pays an emerald for — up to a load of 16 units, but always at least one lot,
+so 32 logs for one emerald go along too.</p>
+
+<ul>
+<li><strong>At the end of the trip the trader sells first and buys after.</strong> The emeralds and what was
+  bought go into the post's own pile and are carried to the store like any output; whatever did not sell goes
+  back into the pile it came from.</li>
+<li><strong>A village only trades so much a day.</strong> It turns over one emerald a day for every bed it has,
+  shared by every trade post that trades with it — see the <a href="charter.html">charter's page</a> for the
+  number.</li>
+<li><strong>Every emerald traded raises the reputation</strong> of your settlement with that village, and a high
+  reputation brings more people from it — see <a href="../land/villages.html#reputation">Villages</a>.</li>
+<li><strong>If the connection is lost while the trader is out, everything comes back as it went</strong>: no
+  sale, no purchase, no reputation.</li>
+</ul>
+
+<h2 id="selling">Selling</h2>
+
+<p><strong>The post sells only what the settlement has to spare.</strong> On the
+<a href="../start/charter-screen.html#buildings">buildings tab</a> its stock lines are what it sells — one for
+every good a village pays for, starting at 0. Raise a line, and the carriers bring the post that much of the
+good, but only out of surplus: stock above the good's
+<a href="../settlement/goods.html#only-so-much-is-made">ceiling</a> that no site and no upgrade has set
+aside.</p>
+
+<ul>
+<li><strong>A sale target counts in whole lots.</strong> A lot is what a village takes for the price — 16
+  planks, 8 ashlars — and a click on <strong>-</strong> or <strong>+</strong> moves the target one lot,
+  <strong>Shift</strong> ten. The line says <em>“Planks: 0 of 16 (in lots of 16)”</em>.</li>
+<li><strong>The sale target makes the settlement produce that surplus.</strong> A good is made until the store
+  holds its ceiling plus the sale targets of all trade posts for it: two posts with a target of 16 planks raise
+  the limit by 32.</li>
+<li><strong>What each good fetches</strong> is in the last column of
+  <a href="../settlement/goods-list.html">All goods</a>; a good without a price there is not taken.</li>
+</ul>
+
+<h2 id="buying">Buying</h2>
+
+<p><strong>The post buys up to a target you set.</strong> Under <em>Buys up to:</em> on the buildings tab there is
+one line for every good the village sells, starting at 0. The trader buys while the settlement holds less of
+the good than the target and emeralds lie ready, and the post orders those emeralds from the store by itself.
+What a village sells, and for how much, is in the table at the top of this page.</p>
+
+<h2 id="what-you-see">What you see</h2>
+
+<ul>
+<li><strong>The trader walks the trip</strong>: over your roads to the gate, down the link road into the
+  village to its bell, and back the same way — out with the goods in hand, home with an emerald. The rest of
+  the time they stand behind the counter of the post.</li>
+<li><strong>A post that does not set out says what it waits for</strong>: <em>“X has nothing to sell yet: not
+  one lot of Y lies in its store.”</em> Waiting between two trips is normal.</li>
+<li><strong>The buildings tab says how it stands:</strong> <em>“Trades with a village of N beds: reputation R,
+  E of M emeralds traded today.”</em>, while the trader is out <em>“The trader is back in 4:00 min.”</em>, and
+  <em>“N emeralds for purchases lie ready.”</em> Without a partner it says <em>“Trades with nobody: …”</em> and
+  the reason.</li>
+</ul>
+
+<p>See also: <a href="village-gate.html">Village Gate</a>, <a href="../land/villages.html">Villages</a>,
+<a href="../settlement/goods-list.html">All goods</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Buildings</strong>: <a href="../buildings/index.html">All buildings</a> · <a href="../buildings/chains.html">Production chains</a> · <a href="../buildings/upgrades.html">Upgrades</a></p>
+<p><strong>Settlement</strong>: <a href="../buildings/charter.html">Charter</a> · <a href="../buildings/house.html">House</a> · <a href="../buildings/storehouse.html">Storehouse</a> · <a href="../buildings/builders-yard.html">Builders' Yard</a> · <a href="../buildings/tavern.html">Tavern</a></p>
+<p><strong>Wood</strong>: <a href="../buildings/lumberjack.html">Lumberjack</a> · <a href="../buildings/forester.html">Forester</a> · <a href="../buildings/sawmill.html">Sawmill</a> · <a href="../buildings/toolmaker.html">Toolmaker</a> · <a href="../buildings/charcoal-pile.html">Charcoal Pile</a></p>
+<p><strong>Stone</strong>: <a href="../buildings/quarry.html">Quarry</a> · <a href="../buildings/opencast-quarry.html">Opencast Quarry</a> · <a href="../buildings/stonemason.html">Stonemason</a></p>
+<p><strong>Food and drink</strong>: <a href="../buildings/fishing-hut.html">Fishing Hut</a> · <a href="../buildings/orchard.html">Orchard</a> · <a href="../buildings/farm.html">Farm</a> · <a href="../buildings/windmill.html">Windmill</a> · <a href="../buildings/bakery.html">Bakery</a> · <a href="../buildings/brewery.html">Brewery</a></p>
+<p><strong>Iron</strong>: <a href="../buildings/mine.html">Mine</a> · <a href="../buildings/adit-mine.html">Adit Mine</a> · <a href="../buildings/smelter.html">Smelter</a> · <a href="../buildings/smithy.html">Smithy</a></p>
+<p><strong>Trade and defence</strong>: <strong>Trade Post</strong> · <a href="../buildings/village-gate.html">Village Gate</a> · <a href="../buildings/watchtower.html">Watchtower</a> · <a href="../buildings/barracks.html">Barracks</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

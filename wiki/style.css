@@ -1,0 +1,105 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #22201c;
+  --muted: #6b665d;
+  --line: #ddd8cc;
+  --link: #2f5d8a;
+  --code: #efece4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1b19;
+    --text: #e6e2d8;
+    --muted: #a39d90;
+    --line: #3a3833;
+    --link: #8db8e3;
+    --code: #2a2926;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+nav {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 4rem;
+}
+
+h1 { font-size: 1.9rem; line-height: 1.2; }
+h2 { font-size: 1.35rem; margin-top: 2.2rem; }
+h3 { font-size: 1.1rem; margin-top: 1.6rem; }
+
+a { color: var(--link); }
+
+.trail {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.navbox {
+  margin-top: 3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.navbox p { margin: 0.4rem 0; }
+
+dt { font-weight: 600; margin-top: 0.9rem; }
+dd { margin-left: 1.2rem; }
+
+li { margin-bottom: 0.5rem; }
+
+code, pre {
+  background: var(--code);
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+code { padding: 0 0.25em; }
+
+pre {
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 1rem 0;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.facts th {
+  width: 10rem;
+  background: var(--code);
+}
+
+tbody th[colspan] {
+  background: var(--code);
+  text-align: left;
+}

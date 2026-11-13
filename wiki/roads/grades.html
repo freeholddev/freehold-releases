@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Road grades — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#roads">Roads</a></p>
+<!-- /generated -->
+<h1>Road grades</h1>
+
+<p>A road has one of three grades: <strong>earth road, wooden road and stone road</strong>. You only ever
+draw an earth road; the settlement lays wood and then stone over it by itself, on a road that carries
+enough traffic and already meets the higher grade at one of its ends.</p>
+
+<table>
+<thead>
+<tr><th></th><th>Earth Road</th><th>Wooden Road</th><th>Stone Road</th></tr>
+</thead>
+<tbody>
+<tr><th>Walked</th><td>a little over twice as fast as open ground</td><td>about two and a half times as fast as open ground</td><td>three times as fast as open ground</td></tr>
+<tr><th>Costs</th><td>nothing</td><td>1 plank a column</td><td>1 ashlar a column</td></tr>
+<tr><th>Work a column</th><td>2</td><td>4</td><td>6</td></tr>
+<tr><th>Trips it needs</th><td>—</td><td>24 over the last 3 days, as an earth road</td><td>36 over the last 3 days, as a wooden road</td></tr>
+<tr><th>Back when torn up</th><td>nothing</td><td>half its planks</td><td>half its ashlars</td></tr>
+</tbody>
+</table>
+
+<h2 id="when-a-road-rises">When a road rises</h2>
+
+<p><strong>A road rises one grade once it carries enough trips and meets the next grade at one of its
+ends.</strong> Both have to hold at the same time.</p>
+
+<ul>
+<li><strong>Traffic.</strong> Every trip whose way runs over the road counts, once per trip, out and back
+  together, over the last three days.</li>
+<li><strong>A connection.</strong> At one of the road's two ends there is already the higher grade: a
+  <a href="../buildings/upgrades.html">building of level 2</a> — for wood and for stone alike — or another
+  road of at least that grade. A crossing in the middle of a road is not one of its ends. So wood and stone
+  spread outwards from the busy buildings of level 2, road by road.</li>
+</ul>
+
+<p><strong>The settlement looks once a day.</strong> Of the roads that qualify, the one with the most trips
+goes first, and it goes into the <a href="../start/glossary.html#build-queue">build queue</a> once the store
+holds all of its goods; those are then set aside for it, as for the upgrade of a building.</p>
+
+<p><strong>The road stays in use while it is being upgraded.</strong> The builders lay the new surface a
+stretch at a time.</p>
+
+<p><strong><em>Upgrade before new building</em> covers roads as well.</strong> On the politics tab of the
+<a href="../start/charter-screen.html">charter screen</a> it divides the road builders between upgrading
+roads and laying new ones — and <strong>at 0 no road rises either</strong>. In the build queue a road
+upgrade stands as “Wooden Road over a road, waiting for its goods”, then with its stage, and it can be moved
+like any site.</p>
+
+<h2 id="what-it-costs">What it costs</h2>
+
+<p><strong>An upgrade costs one plank or one ashlar for each column along the route</strong>, not for the
+three columns of its width: a road 40 columns long costs 40 planks. Columns that another road of that grade
+already carries cost nothing.</p>
+
+<h2 id="what-it-looks-like">What it looks like</h2>
+
+<p><strong>A wooden and a stone road have a middle and two edges</strong>, and both take their blocks from
+the biome they lie in. The earth road is a dirt path all the way across.</p>
+
+<ul>
+<li><strong>Wooden road:</strong> planks in the middle, and along the edges logs with their bark on, in the
+  dark wood of the biome.</li>
+<li><strong>Stone road:</strong> a paved middle between masoned edges — in most biomes polished andesite
+  between stone bricks, in the desert and the badlands cut sandstone between mud bricks, so the road stands out
+  from the sand.</li>
+</ul>
+
+<h3 id="the-forecourt">The forecourt</h3>
+
+<p><strong>The forecourt of a building wears the surface of the road that ends at it.</strong> Many buildings
+have a strip of road of their own in front of the door. It is a dirt path at an earth road or with no road at
+all, and it rises with the road, so the road runs up to the door without a seam. Where several roads end at the
+same door, the highest grade counts.</p>
+
+<h2 id="reading-a-road">Reading a road</h2>
+
+<p><strong>Right-click a road with an empty hand, and a line over the hotbar says where it stands.</strong>
+It is shown to everybody with a role in the settlement. What it can say:</p>
+
+<table>
+<thead>
+<tr><th>Line</th><th>What it means</th></tr>
+</thead>
+<tbody>
+<tr><td>Earth Road. Trips over the last 3 days: 10 of the 24 that upgrade it to Wooden Road.</td><td>Not enough traffic yet</td></tr>
+<tr><td>Earth Road. Trips over the last 3 days: 30 of 24, enough, but nothing at either end is Wooden Road yet: a building of level 2 or a road of that grade.</td><td>Traffic enough, no connection</td></tr>
+<tr><td>Earth Road. Trips over the last 3 days: 30 of 24. It is upgraded to Wooden Road once the store holds its goods.</td><td>It qualifies and waits for its material</td></tr>
+<tr><td>Wooden Road: being upgraded to Stone Road.</td><td>The upgrade is under way</td></tr>
+<tr><td>Stone Road, the highest grade. Trips over the last 3 days: 50.</td><td>There is nothing above it</td></tr>
+<tr><td>Earth Road: still being laid.</td><td>The road is not finished</td></tr>
+</tbody>
+</table>
+
+<p>See also: <a href="laying.html">Once the route is finished</a>,
+<a href="tearing-up.html">Tearing up a road</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Roads</strong>: <a href="../roads/drawing.html">Drawing a road</a> · <a href="../roads/laying.html">Once the route is finished</a> · <strong>Road grades</strong> · <a href="../roads/tearing-up.html">Tearing up a road</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

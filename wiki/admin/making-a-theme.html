@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making a theme — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#for-server-admins">For server admins</a></p>
+<!-- /generated -->
+<h1>Making a theme</h1>
+
+<p>A <a href="themes.html">theme</a> is made in the game: Freehold sets out one of its buildings in front of you,
+you rebuild it with ordinary blocks, and one command reads it back into a datapack. Nothing has to be installed
+and no file has to be written by hand. This page walks through it a building at a time.</p>
+
+<h2 id="before-you-start">Before you start</h2>
+
+<ul>
+<li><strong>A world of your own, in creative mode, with cheats on</strong> — every command here needs operator
+  rights. A superflat world gives the most room.</li>
+<li><strong>A name for the theme</strong>: lower-case letters, digits and <code>_ - .</code>, but not
+  <code>freehold</code>, not <code>minecraft</code> and not dots alone. It is the namespace of the datapack, and it is what the
+  founding screen shows unless a resource pack gives it a nicer name.</li>
+<li><strong>Which buildings there are</strong>: <code>/freehold blueprint list</code> lists them, with keys like
+  <code>freehold:house_t1</code> — <code>_t2</code> is the second level — and their versions, like
+  <code>default</code> or <code>porch</code>.</li>
+</ul>
+
+<h2 id="1-set-out-the-template">1. Set out the template</h2>
+
+<p><strong>Stand on open ground and type
+<code>/freehold theme template &lt;theme&gt; &lt;building&gt; [version]</code></strong>, for example
+<code>/freehold theme template nordic freehold:house_t1</code>. Without a version it is
+<code>default</code>.</p>
+
+<ul>
+<li><strong>The building appears around where you stand</strong>, its anchor block one block under your feet, and
+  always unturned: <strong>north is the front of the drawing</strong>.</li>
+<li><strong>A frame shows the box the building may fill</strong>, with labelled marks.</li>
+<li><strong>The chat holds the export command for this template</strong>, ready to click. It carries the corner of
+  the box, so keep it, or come back to it later.</li>
+<li><strong>If your theme already has this version</strong>, the template is your own drawing, so you can go on
+  where you left off; otherwise it is Freehold's.</li>
+</ul>
+
+<h2 id="2-rebuild-it">2. Rebuild it</h2>
+
+<p><strong>Inside the frame everything is yours, and so is its height</strong>: walls, wall height, roof form and
+pitch, windows, façade, furnishing, material. A building may rise above the frame or stay lower than it — see
+<a href="#a-taller-or-lower-building">A taller or lower building</a>. <strong>Four things are fixed</strong>, and
+the export refuses if one of them is off — so a rebuilt building stands on the ground wherever Freehold's own one
+does:</p>
+
+<ul>
+<li><strong>The footprint of the box.</strong> Nothing beside the frame is taken, and nothing above the height
+  the export reads.</li>
+<li><strong>The anchor block</strong> (<code>freehold:building_anchor</code>) stays where it is.</li>
+<li><strong>The marker blocks stay where they are</strong>, and none may be added or taken away. They are the
+  coloured blocks <code>freehold:dev_marker_work</code>, <code>…_home</code>, <code>…_entrance</code>,
+  <code>…_road_link</code> and <code>…_storage_access</code>, and they show where residents work, sleep and come
+  in, where the road meets the building and where the store is reached. <strong>Keep the cells in front of and
+  above them free</strong>: a resident has to stand there and get there from the entrance. A marker that is shut
+  in gives a yellow warning at the export.</li>
+<li><strong>The depth of the foundation.</strong> The game builds the foundation under the box itself; it is not
+  part of the template.</li>
+</ul>
+
+<h3 id="invisible-blocks">Invisible blocks</h3>
+
+<p><strong>Where Freehold's building leaves the ground as it is, the template sets structure void</strong>
+(<code>minecraft:structure_void</code>), an invisible vanilla block. What you do with it decides that cell:</p>
+
+<ul>
+<li><strong>Leave the structure void</strong>, and the ground there stays as it is when the building goes up.</li>
+<li><strong>Put a block in its place</strong>, and the block belongs to the building.</li>
+<li><strong>Put air in its place</strong>, and the building clears the cell.</li>
+<li><strong>Set structure void yourself</strong> to take a cell out of the building.</li>
+</ul>
+
+<h3 id="material-that-follows-the-biome">Material that follows the biome</h3>
+
+<p><strong>Use Freehold's own blocks, and your building takes the wood and stone of its biome</strong> — spruce in
+the taiga, sandstone in the desert, as Freehold's buildings do. The export writes these blocks back as their
+material:</p>
+
+<table>
+<thead>
+<tr><th>Block</th><th>Becomes</th></tr>
+</thead>
+<tbody>
+<tr><td>Oak planks, stairs, slab, log, stripped log, stripped log slab, trapdoor, door, fence</td><td>light wood</td></tr>
+<tr><td>Spruce planks, stairs, slab, log, stripped log, stripped log slab, trapdoor, door, fence; mangrove trapdoor (the window)</td><td>dark wood</td></tr>
+<tr><td>Cobblestone, cobblestone stairs, slab and wall</td><td>stone</td></tr>
+<tr><td>Stone bricks, stone brick stairs and slab; polished andesite</td><td>masonry</td></tr>
+<tr><td>Coarse dirt</td><td>ground</td></tr>
+</tbody>
+</table>
+
+<p>The exact list is the <code>default</code> line of each file under <code>data/freehold/material_class/</code>
+— see <a href="datapack.html#material-class">material_class/</a>. If your theme has class files of its own, their
+<code>default</code> blocks count instead. <strong>Every other block stays the same in every biome</strong> —
+glass, lanterns, birch planks — which is what you want where a building should look alike everywhere. To keep
+every block as it is, add <code>blocks</code> to the end of the export command.</p>
+
+<h2 id="3-export-it">3. Export it</h2>
+
+<p><strong>Click the command in the chat and send it:</strong>
+<code>/freehold theme export &lt;theme&gt; &lt;building&gt; &lt;version&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; [height] [blocks]</code>.</p>
+
+<ul>
+<li><strong>Without a height the export reads the box as high as your theme already draws the building</strong> in
+  another version, and otherwise as high as the template. For a different height, see
+  <a href="#a-taller-or-lower-building">A taller or lower building</a>.</li>
+<li><strong>A red line is an error</strong>, with the coordinates of the problem, and nothing is written.</li>
+<li><strong>A yellow line is a warning</strong>; the building is written anyway.</li>
+<li><strong><em>“Not one of the … marker blocks stands where the drawing has it”</em></strong> means the corner in
+  the command is wrong — use the command the template gave you.</li>
+<li><strong>On success the theme lies in <code>&lt;world&gt;/datapacks/&lt;theme&gt;/</code></strong>; the folder
+  is created along with its <code>pack.mcmeta</code>.</li>
+</ul>
+
+<h2 id="4-load-it-and-look-at-it">4. Load it and look at it</h2>
+
+<p><strong>Run <code>/reload</code>.</strong> Then <code>/freehold blueprint preview &lt;theme&gt;:&lt;building&gt;</code>
+sets the result out where you stand, and a settlement builds it once it is in that theme: choose it at the
+founding, or set it with <code>/freehold theme set &lt;freehold&gt; &lt;theme&gt;</code> — see
+<a href="themes.html">Themes</a>.</p>
+
+<h2 id="a-taller-or-lower-building">A taller or lower building</h2>
+
+<p><strong>A theme may draw a building taller or lower than Freehold's.</strong> Build on above the template, or
+leave its top layers empty, and give the export the height you want as the number of layers it reads back, counted
+up from the corner in the command — at least 2:
+<code>/freehold theme export nordic freehold:house_t1 default &lt;x&gt; &lt;y&gt; &lt;z&gt; 12</code>.</p>
+
+<ul>
+<li><strong>Above the template every block counts as part of the building.</strong> A marker block there is an
+  error: markers cannot move.</li>
+<li><strong>A lower box must not cut off a marker.</strong> If one of the template's markers lies above the height
+  you give, the export refuses and names the marker.</li>
+<li><strong>Every version of a building in one theme has the same height.</strong> If your theme already draws
+  another version of it, a different height is refused — <em>“The theme draws the other variants of … layers high;
+  every variant of a key in a theme shares its box”</em>. A version that wants to be lower than its siblings
+  leaves its top layers empty.</li>
+<li><strong>A box that would reach above the build limit is refused.</strong></li>
+</ul>
+
+<p><strong>In the game a building is as tall as its theme draws it.</strong> The outline when placing it, the
+levelling of its site, its protection and its demolition reach up to that height, and a
+<a href="../buildings/windmill.html">windmill</a> beside it sees that height when it checks its open stand. What
+happens to standing buildings when a settlement changes to a theme of another height is on
+<a href="themes.html#changing-a-theme">Themes</a>.</p>
+
+<h2 id="versions">Versions</h2>
+
+<p><strong>Export the version <code>default</code> of a building first</strong> — without it, the export refuses
+every other. A building placed in a version your theme does not draw is built in your theme's
+<code>default</code>. All versions of a building in your theme share one height — see
+<a href="#a-taller-or-lower-building">A taller or lower building</a>.</p>
+
+<h2 id="handing-it-on">Handing it on</h2>
+
+<p><strong>Zip the folder <code>&lt;world&gt;/datapacks/&lt;theme&gt;/</code>.</strong> Next to the game's files it
+holds the drawings as text under <code>blueprint_source/</code>, so whoever works on the theme next sets out your
+drawing with <code>template</code> and builds on. Freehold's licence allows datapacks of your own.</p>
+
+<h2 id="common-pitfalls">Common pitfalls</h2>
+
+<ul>
+<li><strong><code>/fill … replace</code> sets a block in its plain state</strong>: stairs, doors and trapdoors lose
+  their facing. Set them by hand.</li>
+<li><strong>A bed, a door or any block of two parts</strong> has to lie wholly inside the frame.</li>
+<li><strong>New material classes of your theme</strong> count at the export only after <code>/reload</code>.</li>
+</ul>
+
+<h2 id="recolouring-only">Recolouring only</h2>
+
+<p><strong>One material class file recolours every building without a single one rebuilt.</strong>
+<code>data/&lt;theme&gt;/material_class/wood.json</code> replaces Freehold's wood as a whole — nothing of Freehold's
+file is mixed in. The same goes for <code>stone</code>, <code>masonry</code> and <code>ground</code>. Its shape:</p>
+
+<pre>{
+  "schema_version": 1,
+  "ranks": {
+    "light": {
+      "default": {"planks": "minecraft:birch_planks", "stairs": "minecraft:birch_stairs", "...": "..."},
+      "biomes": {"minecraft:taiga": {"planks": "minecraft:spruce_planks", "...": "..."}}
+    },
+    "dark": {"default": {"...": "..."}}
+  }
+}</pre>
+
+<ul>
+<li><strong>Every form Freehold's file has must stand in <code>default</code></strong> — for wood:
+  <code>planks</code>, <code>stairs</code>, <code>slab</code>, <code>log</code>, <code>stripped_log</code>,
+  <code>trapdoor</code>, <code>door</code>, <code>fence</code>, <code>log_slab</code>, <code>window</code>.</li>
+<li><strong>A biome without an entry takes <code>default</code>.</strong> A key under <code>biomes</code> may also
+  name a biome tag, as <code>"#minecraft:is_taiga"</code>; a biome without a line of its own takes the first tag
+  line it carries, in the order of the file, before <code>default</code> — see
+  <a href="datapack.html#material-class">material_class/</a>.</li>
+<li><strong>The dark wood must be darker than the light</strong>, or the file is dropped at loading, with a line in
+  the log.</li>
+<li><strong>The best start is Freehold's own file</strong>, <code>data/freehold/material_class/wood.json</code> in
+  the mod's jar.</li>
+</ul>
+
+<h2 id="for-the-advanced">For the advanced</h2>
+
+<p><strong>The export also writes the drawing as text</strong>, to
+<code>data/&lt;theme&gt;/blueprint_source/&lt;building&gt;/&lt;version&gt;.fhb</code>, and it can be edited by hand.
+The next export of that version writes it anew from what stands in the game.</p>
+
+<p>See also: <a href="themes.html">Themes</a>, <a href="datapack.html">The datapack</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>For server admins</strong>: <a href="../admin/gamerules.html">Game rules and commands</a> · <a href="../admin/datapack.html">The datapack</a> · <a href="../admin/themes.html">Themes</a> · <strong>Making a theme</strong></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

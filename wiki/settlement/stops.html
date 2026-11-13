@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Messages — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#the-settlement">The settlement</a></p>
+<!-- /generated -->
+<h1>Messages</h1>
+
+<h2 id="when-a-building-stops">When a building stops</h2>
+
+<p>A marker floats over the building for as long as the cause lasts. <strong>Every message is one of
+three kinds</strong>:</p>
+
+<ul>
+<li><strong>A blockade</strong> stands until you act.</li>
+<li><strong>A waiting message</strong> stands as well, but the settlement is already clearing it itself — a
+  delivery on the road, enough in stock, a tool being made.</li>
+<li><strong>A hint</strong> means the building works, only worse than it could.</li>
+</ul>
+
+<p><strong>By default only blockades go into the chat</strong>, so a line in the chat means somebody has to
+do something. Each player chooses that for themselves with the button under the list <em>What it is waiting
+for</em> on the <a href="../start/charter-screen.html#overview">overview</a>: every click moves on to the
+next of <em>Chat: blockades only</em>, <em>Chat: blockades and waiting</em> and <em>Chat: off</em>. <strong>Hints
+never go into the chat.</strong> The choice is kept on your own game, across a restart too. Only players with
+a role in the settlement see any of it. <strong>M hides the markers</strong> over buildings and road sites,
+and pressing it again brings them back; the chat is not affected — see
+<a href="../start/controls.html">Controls</a>. What the messages mean:</p>
+
+<table>
+<thead>
+<tr><th>Message</th><th>Kind</th><th>What to do</th></tr>
+</thead>
+<tbody>
+<tr><td>has no trees left within its work radius</td><td>blockade</td><td>Build a forester, or move the lumberjack</td></tr>
+<tr><td>has no free planting spot left within its work radius</td><td>blockade</td><td>A forester or an orchard: the radius is full of trees already — nothing to do. A farm: there is no whole plot of grass or dirt in daylight within its reach — move it</td></tr>
+<tr><td>is waiting for X for its next stage</td><td>blockade</td><td>X is the first good the next stage still lacks — <em>“Watchtower 1 is waiting for Torch for its next stage.”</em> Hand it into the goods port if it is a <a href="goods.html#handing-goods-in">basic good</a>, otherwise build what makes it</td></tr>
+<tr><td>is waiting for a builder</td><td>blockade</td><td>Every builder is busy, or the sites ahead of it are already full; the charter has one place, a builders' yard two more. Where both a road and a building are in the queue, the politics tab decides which of them gets them</td></tr>
+<tr><td>has no free housing left, so nobody else moves in</td><td>blockade</td><td>Build a house</td></tr>
+<tr><td>cannot go on: the store is full, mostly of X</td><td>blockade</td><td>X is what is filling it. Spend it, or build a storehouse — never another producer</td></tr>
+<tr><td>cannot go on: nothing has fetched its output</td><td>blockade</td><td>Its own pile is full. Usually the store is full behind it</td></tr>
+<tr><td>cannot get X: the settlement has some, but none of it is in the store</td><td>blockade</td><td>Spend what is piling up, or make room — never build another producer</td></tr>
+<tr><td>cannot be reached: there is no way to it from anywhere in the settlement</td><td>blockade</td><td>It has no way to a store: more than 256 blocks from every store and from everything it trades with, and no road to a building that is reached. Build a road from it to a building that is reached, or a storehouse within range — see <a href="goods.html#goods-do-not-teleport">Goods and carriers</a></td></tr>
+<tr><td>has stopped: its datapack entry is missing</td><td>blockade</td><td>Its building has gone from the datapack — a matter for the server admin. It rests and loses nothing, and goes on as soon as the entry is back</td></tr>
+<tr><td>has stopped: its drawing could not be loaded; the reason is in the server log</td><td>blockade</td><td>The drawing of its level is in the datapack but cannot be read — a matter for the server admin. It rests and loses nothing, and goes on as soon as the drawing loads again</td></tr>
+<tr><td>has nobody to trade with: no village is connected to the settlement</td><td>blockade</td><td>A trade post. Connect a village with a <a href="../buildings/village-gate.html">village gate</a></td></tr>
+<tr><td>has nobody to trade with: no connected village lies within its reach</td><td>blockade</td><td>A trade post. Build one nearer to the gate of a connected village</td></tr>
+<tr><td>has nobody to trade with: no road leads from it to the gate of a connected village</td><td>blockade</td><td>A trade post. Draw a road from it to the gate</td></tr>
+<tr><td>does not connect its village yet: draw a road from the gate into the settlement</td><td>blockade</td><td>A village gate. Draw a road that ends at the gate's front</td></tr>
+<tr><td>has no X left</td><td>blockade</td><td>It uses X, none reaches it, and a building of your settlement makes X — it just has none to spare. Make more of X, or hand some in if it is a basic good</td></tr>
+<tr><td>has no food left; its people will move away if none arrives</td><td>blockade</td><td>A house with an empty larder. Two days from now it loses a resident — see <a href="food.html">Food</a></td></tr>
+<tr><td>has beds free but no food in any of them, so nobody moves in</td><td>blockade</td><td>Stands on the settlement, not on a house. Get bread, fish or fruit into the store</td></tr>
+<tr><td>Nobody moves in to X: the free beds are in houses with no fuel</td><td>blockade</td><td>Stands on the settlement. The free beds are in houses of level 2 with food but a cold hearth, which take nobody in — see <a href="fire.html">The fire in a building</a>. Get fuel, or give the house a larger share of it on the politics tab</td></tr>
+<tr><td>has no X left within its reach, and it does not dig beyond that</td><td>blockade</td><td>X names what ran out. At a quarry that is final: tear it down and build a new one on fresh rock. At a mine it is one seam, and the other goes on being worked — see <a href="../buildings/mine.html#when-a-seam-runs-out">Mine</a></td></tr>
+<tr><td>has too little water within its work radius to fish</td><td>blockade</td><td>The fishing hut stands on too small a water. Move it</td></tr>
+<tr><td>could use X, and nothing here makes it — build what does, or hand some in at a goods port</td><td>hint</td><td>It lacks X, and no finished building of your settlement makes it. Build what makes X, or hand it in if it is a <a href="goods.html#handing-goods-in">basic good</a>. Once such a building stands, the same shortage reads “has no X left”</td></tr>
+<tr><td>does not connect its village: another gate holds it already</td><td>hint</td><td>A village gate. The village is connected to another settlement, or to another gate of yours; it comes free only when that connection ends</td></tr>
+<tr><td>has no guests — no house stands within its reach</td><td>hint</td><td>A tavern with no house within its reach pours nothing. Build a house near it</td></tr>
+<tr><td>has a free post, but no house stands within reach of it</td><td>hint</td><td>No resident with a bed within 64 blocks can take the post, so it stays empty. Build a house near it — see <a href="residents.html#where-people-live">Where people live</a></td></tr>
+<tr><td>has a free post, but no house within reach of it has a supplied bed free</td><td>hint</td><td>Somebody is out of work but lives too far off, and no house within 64 blocks has a supplied bed free. Either the houses there are full: build another one nearby, or upgrade one. Or a house there has free beds but no food: then the answer is food — see <a href="residents.html#where-people-live">Where people live</a></td></tr>
+<tr><td>waits for its first guard: until one takes the post, it claims no land and cannot be attacked</td><td>hint</td><td>A finished watchtower that has never had a guard. It needs a resident free for the post — more fed beds bring more people. The hint goes with the first guard and does not come back — see <a href="../buildings/watchtower.html">Watchtower</a></td></tr>
+<tr><td>was built to an older version of its drawing and is no longer repaired by itself. It can be rebuilt to the current drawing in the buildings tab.</td><td>hint</td><td>Nothing is wrong with it; if you want it repaired by itself again, lift it on the buildings tab — see <a href="../land/boundary.html#what-the-settlement-repairs">What the settlement repairs</a></td></tr>
+<tr><td>a worker lives too far away and gives up the post after a day, unless a bed within reach comes free</td><td>hint</td><td>Its worker lives more than 64 blocks off and has found no bed nearer. Build a house near it, or let the post fall free and be taken by somebody closer</td></tr>
+<tr><td>has stopped: the settlement has enough X</td><td>waiting</td><td>Nothing — it has made as much of X as the settlement wants ready. Spending X, wearing a tool out or a new hut brings the work back</td></tr>
+<tr><td>is waiting for a delivery that is on its way</td><td>waiting</td><td>Nothing — it is on the road; if it takes forever, it is far away or you are short of carriers</td></tr>
+<tr><td>has not started yet: X is on its way</td><td>waiting</td><td>Nothing — it is holding out for its tool rather than working at triple time</td></tr>
+<tr><td>is working with incomplete gear: X is missing</td><td>waiting</td><td>Hand the tool in if it is a basic one, or wait for the toolmaker; it is slow, not stopped</td></tr>
+<tr><td>began this job without X and stays slow until it is finished</td><td>waiting</td><td>Nothing — a job keeps the pace it started with</td></tr>
+<tr><td>is waiting for its link road into the village to be laid</td><td>waiting</td><td>A village gate. Nothing — the builders lay the link road</td></tr>
+<tr><td>has nothing to sell yet: not one lot of X lies in its store</td><td>waiting</td><td>A trade post with a sale target for X. Nothing — the surplus is on its way; the post sets out once a whole lot lies in its store</td></tr>
+<tr><td>has nobody to trade with: its village is recovering from a lost raid and trades with nobody for a few days</td><td>waiting</td><td>A trade post. Nothing — the trade comes back by itself, see <a href="../land/raids.html#a-raid-on-a-village">Raids</a></td></tr>
+</tbody>
+</table>
+
+<p><strong>A hint is not a standstill.</strong> The building goes on working, only worse than it could,
+and the marker says why. <strong>When you join a game</strong>, every blockade that is still standing
+is said once in the chat, so you do not walk into a stopped settlement without a word — and, with
+<em>Chat: blockades and waiting</em>, every waiting message too. With <em>Chat: off</em> nothing is said.</p>
+
+<h2 id="running-short">Running short</h2>
+
+<p><strong>The settlement warns you before its food or its fuel runs out.</strong> At the start of every day
+it compares what it holds — in the store, in every building and on the road — with the stock three days
+before. Food is bread, fish and fruit counted together.</p>
+
+<ul>
+<li><strong>The warning starts when the stock has fallen and, at that pace, lasts less than three more
+  days.</strong></li>
+<li><strong>It ends when the stock stops falling, or lasts at least six days again.</strong></li>
+<li><strong>Once the stock is empty, the houses speak instead</strong>: <em>“has no food left; its
+  people will move away if none arrives”</em>.</li>
+<li><strong>Nothing is warned in the first three days</strong> of a settlement.</li>
+</ul>
+
+<p><strong>When the warning starts, one line goes into the chat</strong> to everybody with a role in the
+settlement — <em>“Oakhill: Food is running short. The stock has fallen over the last 3 days and lasts about 2 more
+days.”</em> It goes with the blockades, so <em>Chat: off</em> silences it. There is no marker over a building
+for it; <strong>the overview shows the stock</strong> of food and fuel every day, in gold while the warning
+stands — see <a href="../start/charter-screen.html#overview">The charter screen</a>.</p>
+
+<h2 id="other-messages">Other messages</h2>
+
+<table>
+<thead>
+<tr><th>Message</th><th>When</th></tr>
+</thead>
+<tbody>
+<tr><td>X is founded. The charter is going up.</td><td>You have placed the charter</td></tr>
+<tr><td>A village of N beds lies near the boundary. A village gate beside it and a road to the gate connect it, and then people move in from it.</td><td>At the founding, once for every village found — see <a href="../land/villages.html">Villages</a></td></tr>
+<tr><td>X stands. Its residents have moved in and need building material first.</td><td>The charter is finished</td></tr>
+<tr><td>X is planned in Y. Hand in the material and a builder will raise it.</td><td>You have placed a building</td></tr>
+<tr><td>X ordered: N columns, M work units. It is in the build queue.</td><td>You have finished drawing a road</td></tr>
+<tr><td>X in Y has been torn down. Back into the store: …</td><td>A building is gone, with what came back</td></tr>
+<tr><td>X in Y is being rebuilt to the current drawing.</td><td>You have lifted a building to its current drawing</td></tr>
+<tr><td>The marked stretch of X in Y has been torn up. Back into the store: …</td><td>A stretch of road is gone</td></tr>
+<tr><td>X is manned: Y now claims N more chunks.</td><td>The first guard has taken the post of a watchtower</td></tr>
+<tr><td>X gives up N chunks of land.</td><td>A watchtower has been torn down</td></tr>
+<tr><td>Land beside X has come free: it now claims N more chunks.</td><td>A neighbour gave land up that your towers could not take before</td></tr>
+<tr><td>X is now connected to N villages with M beds in all. People move in from there.</td><td>A village has been connected, or the connected villages have changed</td></tr>
+<tr><td>X is connected to no village any more.</td><td>The last connected village has lost its connection</td></tr>
+<tr><td>X: Y has left the settlement. There was nothing to eat in Z.</td><td>A resident has left because the larder of their house, Z, stood empty for two days and no house with food had a free bed — see <a href="food.html">Food</a>. Said in the chat like a blockade: with either chat setting but <em>Chat: off</em>, and not again when you join</td></tr>
+<tr><td>X: Y has left the settlement. There was no bed in a house with food.</td><td>A resident who had lost their bed found none in a house with food or in the charter within two days. Said in the chat as the line above</td></tr>
+<tr><td>X: Y is running short. The stock has fallen over the last N days and lasts about M more days.</td><td>Food or fuel will run out within a few days at the present pace — see <a href="#running-short">Running short</a>. Said in the chat like a blockade</td></tr>
+<tr><td>X: N raiders are coming. Their target: Y.</td><td>A raid has been announced — see <a href="../land/raids.html#how-you-hear-of-it">Raids</a>, where every raid line is listed</td></tr>
+<tr><td>X attacks the Y of Z with N soldiers.</td><td>One settlement has attacked another — see <a href="../land/attacks.html#how-you-hear-of-it">Attacks</a>, where every attack line is listed</td></tr>
+<tr><td>X has fallen with its charter and is no more.</td><td>Your settlement has lost its charter to an attack and has ended — see <a href="../land/attacks.html#the-end-of-a-settlement">The end of a settlement</a></td></tr>
+<tr><td>N × X handed in.</td><td>At a goods port</td></tr>
+<tr><td>The store is full; X does not fit.</td><td>At a goods port — build a storehouse, or spend something</td></tr>
+<tr><td>X is not something this settlement stores.</td><td>At a goods port, with an item that is no good — see <a href="goods-list.html">All goods</a> for what it takes</td></tr>
+<tr><td>The settlement makes X for itself; only basic goods are handed in here.</td><td>At a goods port, with a good that is not basic — see <a href="goods.html#handing-goods-in">Handing goods in</a></td></tr>
+<tr><td>Nothing in this settlement makes X yet, and it cannot be handed in. Place a building that makes it first.</td><td>You picked a building whose cost cannot reach the settlement yet — see <a href="../start/charter-screen.html#build">The charter screen</a></td></tr>
+<tr><td>This block belongs to X and cannot be broken.</td><td>You hit a block of a building or a road</td></tr>
+<tr><td>This tree belongs to an orchard of X. Only its freeholder and members may take it down.</td><td>You tried to fell a tree of somebody else's <a href="../buildings/orchard.html">orchard</a></td></tr>
+<tr><td>This land belongs to X. Only its freeholder and members may change it.</td><td>You tried to change a block on somebody else's land, or to pour or scoop with a bucket there</td></tr>
+<tr><td>This land belongs to X. Only its freeholder and members may use what stands on it.</td><td>Above the hotbar: you tried to use something on somebody else's land — see <a href="../land/boundary.html#using-what-stands-on-your-land">Using what stands on your land</a></td></tr>
+<tr><td>This village is connected to X. Only its freeholder and members may change its land.</td><td>You tried to change a block in a village somebody else has connected — see <a href="../land/villages.html#a-connected-village-is-protected">Villages</a></td></tr>
+<tr><td>A road of X runs here; its passage has to stay clear.</td><td>You tried to set a block into the two blocks of air over a road</td></tr>
+<tr><td>You have no say in X.</td><td>You tried to build or tear down in a settlement that is not yours</td></tr>
+<tr><td>You are not in a settlement, and you have not looked at one yet.</td><td>You pressed <strong>V</strong> outside every territory</td></tr>
+<tr><td>Freehold could not read its saved data for X. Nothing on disk has been changed; the reason is in the server log.</td><td>For the server admin: the world's Freehold save could not be read, even if the file is damaged. Nothing is overwritten — see <a href="../admin/gamerules.html#the-saved-data">The saved data</a></td></tr>
+<tr><td>Freehold has stopped the settlements of X: the simulation ran into an error, and its state is no longer saved. The world stays playable and the last save stays on disk; the reason is in the server log.</td><td>For operators only: the settlements of that dimension stand still until a restart — see <a href="../admin/gamerules.html#when-the-simulation-stops">When the simulation stops</a></td></tr>
+<tr><td>Freehold keeps the rules it had for X: the reloaded datapack does not fit its settlements. The reason is in the server log.</td><td>For operators, after <code>/reload</code>: the new datapack does not fit the settlements, and the old rules stay — see <a href="../admin/datapack.html">The datapack</a></td></tr>
+</tbody>
+</table>
+
+<p>Why a placement is refused is said above the hotbar while you place; every reason is listed on
+<a href="../start/placing.html#why-a-place-is-refused">Placing a building</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>The settlement</strong>: <a href="../settlement/residents.html">Residents</a> · <a href="../settlement/goods.html">Goods and carriers</a> · <a href="../settlement/goods-list.html">All goods</a> · <a href="../settlement/tools.html">Tools</a> · <a href="../settlement/soldiers.html">Soldiers and gear</a> · <strong>Messages</strong> · <a href="../settlement/fire.html">The fire in a building</a> · <a href="../settlement/food.html">Food</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

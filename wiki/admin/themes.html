@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Themes — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#for-server-admins">For server admins</a></p>
+<!-- /generated -->
+<h1>Themes</h1>
+
+<p>A theme is a second set of drawings and materials that a settlement builds with instead of Freehold's own.
+It is a datapack with a namespace of its own — <code>nordic</code>, say — and it changes how the buildings look,
+never what they do. <strong>A theme holds for one settlement</strong>, and each settlement can have another.</p>
+
+<h2 id="what-a-theme-holds">What a theme holds</h2>
+
+<p><strong>A theme may leave gaps:</strong> whatever it does not draw, the settlement builds from Freehold's own
+drawings. A theme can be as small as a single file. There are three ways to make one, each of use on its own:</p>
+
+<ol>
+<li><strong>Recolour without building:</strong> one file, <code>data/&lt;theme&gt;/material_class/wood.json</code>
+  (or <code>stone</code>, <code>masonry</code>, <code>ground</code>), replaces the wood or the stone of
+  <strong>every</strong> building — see <a href="making-a-theme.html#recolouring-only">Recolouring only</a>.</li>
+<li><strong>Rebuild a building in the game:</strong> set out a template, rebuild it, export it — see
+  <a href="making-a-theme.html">Making a theme</a>. This is the main way.</li>
+<li><strong>Edit the drawing by hand:</strong> the export also writes the drawing as text, which can be edited
+  further — see <a href="making-a-theme.html#for-the-advanced">For the advanced</a>.</li>
+</ol>
+
+<p><strong>A theme is loaded as soon as its namespace holds a drawing or a material class</strong>; there is no
+file that announces it. Where its files lie:</p>
+
+<table>
+<thead>
+<tr><th>Path</th><th>What it is</th></tr>
+</thead>
+<tbody>
+<tr><td><code>data/&lt;theme&gt;/structure/&lt;building&gt;/&lt;version&gt;.nbt</code></td><td>The blocks of one version of a building</td></tr>
+<tr><td><code>data/&lt;theme&gt;/blueprint/&lt;building&gt;.json</code></td><td>Where its markers, its foundation and its versions are</td></tr>
+<tr><td><code>data/&lt;theme&gt;/blueprint_source/&lt;building&gt;/&lt;version&gt;.fhb</code></td><td>The drawing as text, for whoever works on the theme; the game does not read it</td></tr>
+<tr><td><code>data/&lt;theme&gt;/material_class/&lt;class&gt;.json</code></td><td>Its wood, stone, masonry or ground, by biome</td></tr>
+</tbody>
+</table>
+
+<h2 id="choosing-a-theme">Choosing a theme</h2>
+
+<p><strong>The founder picks the theme when founding.</strong> With more than one theme loaded, the founding screen
+has a button <em>Theme: …</em> under the name field, which steps through the loaded themes; the world's default
+is picked to begin with. Freehold's own theme is called <em>Freehold</em>. With a single theme loaded, or with
+the choice switched off, the screen shows no button — see <a href="../start/founding.html">Founding a
+settlement</a>.</p>
+
+<ul>
+<li><strong>A theme from a datapack shows under its namespace</strong>, because a datapack brings no language
+  file. For a nicer name, ship a resource pack with the key <code>freehold.theme.&lt;namespace&gt;</code>.</li>
+<li><strong>The game rule <code>freehold:theme_choice</code></strong>, on by default, decides whether the founder
+  chooses. When off, every new settlement is founded in the world's default — see
+  <a href="gamerules.html">Game rules</a>.</li>
+</ul>
+
+<h2 id="changing-a-theme">Changing a theme</h2>
+
+<p><strong>A theme acts on what is built; what stands keeps its blocks.</strong> An operator changes the theme of
+a settlement with <code>/freehold theme set</code>. From then on every new building and every upgrade is built in
+the new theme. A building whose drawing the new theme has differently counts as standing in an
+<a href="../land/boundary.html#what-the-settlement-repairs">older version of its drawing</a>: the settlement no
+longer repairs it by itself, and the button <em>Lift to current drawing</em> on the buildings tab rebuilds it in
+the new theme, for nothing.</p>
+
+<p><strong>A theme may draw a building taller or lower than the one that stands.</strong> Until such a
+building is lifted, it takes up the higher of the two heights — for its protection, its demolition and the
+windmill's open stand. Lifting rebuilds that whole space, so in a lower theme the upper layers of the old
+building go.</p>
+
+<h2 id="installing-a-theme">Installing a theme</h2>
+
+<p><strong>Put the datapack folder or zip into <code>&lt;world&gt;/datapacks/</code> and run
+<code>/reload</code>.</strong> <code>/freehold theme list</code> then shows it. A theme someone has made in the
+game lies there already — the export writes it into that folder.</p>
+
+<h2 id="commands">Commands</h2>
+
+<p><strong>Every <code>/freehold theme …</code> command needs operator rights</strong> (level 2). They answer in
+English.</p>
+
+<table>
+<thead>
+<tr><th>Command</th><th>What it does</th></tr>
+</thead>
+<tbody>
+<tr><td><code>/freehold theme list</code></td><td>The loaded themes, each with how many drawings and material classes it holds, the world's default, and every settlement with its number, name and theme</td></tr>
+<tr><td><code>/freehold theme default [theme]</code></td><td>Reads or sets the theme new settlements are founded in, for the whole world; <code>freehold</code> to begin with</td></tr>
+<tr><td><code>/freehold theme set &lt;freehold&gt; [theme]</code></td><td>Reads or sets the theme of one settlement, by its number; the numbers are suggested as you type</td></tr>
+<tr><td><code>/freehold theme template &lt;theme&gt; &lt;building&gt; [version]</code></td><td>Sets out a building to rebuild — see <a href="making-a-theme.html">Making a theme</a></td></tr>
+<tr><td><code>/freehold theme export &lt;theme&gt; &lt;building&gt; &lt;version&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; [height] [blocks]</code></td><td>Reads the rebuilt building back into the theme's datapack, as many layers high as <code>height</code> says (at least 2; without it, as high as the theme's other versions of the building or else the template) — see <a href="making-a-theme.html">Making a theme</a></td></tr>
+</tbody>
+</table>
+
+<p><strong>The number of a settlement is shown by <code>/freehold theme list</code></strong>, one line each —
+<em>“1 Hochstadt: freehold”</em>. The numbers count the settlements of the dimension the command runs in; for a
+settlement in another dimension, run it there or with <code>execute in … run …</code>.</p>
+
+<p>See also: <a href="making-a-theme.html">Making a theme</a>, <a href="datapack.html#material-class">material_class/</a>,
+<a href="gamerules.html">Game rules and commands</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>For server admins</strong>: <a href="../admin/gamerules.html">Game rules and commands</a> · <a href="../admin/datapack.html">The datapack</a> · <strong>Themes</strong> · <a href="../admin/making-a-theme.html">Making a theme</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

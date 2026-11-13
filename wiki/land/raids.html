@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raids — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#your-land">Your land</a></p>
+<!-- /generated -->
+<h1>Raids</h1>
+
+<p>A raid is a band of <strong>raiders</strong> that comes for a settlement or for a village it has
+connected, whether anybody is watching or not. Your <a href="../settlement/soldiers.html">soldiers</a> meet
+them one by one; if they all fall, the raiders carry goods out of your store. A raid takes nothing else: it
+conquers nothing and damages nothing. A server can switch raids off — see <a href="../admin/gamerules.html">Game rules</a>. One settlement sending its
+soldiers against another is something else — see <a href="attacks.html">Attacks</a>.</p>
+
+<!-- generated: defence -->
+<table>
+<thead>
+<tr><th></th><th>On a settlement</th><th>On a connected village</th></tr>
+</thead>
+<tbody>
+<tr><th>Grace</th><td>10 days from the founding</td><td>10 days from the connection</td></tr>
+<tr><th>Threat a day</th><td>2 plus one per resident</td><td>2 plus one per bed</td></tr>
+<tr><th>A raid at</th><td>300 threat</td><td>300 threat</td></tr>
+<tr><th>Raiders</th><td>1, and one more per 10 residents</td><td>1, and one more per 5 beds</td></tr>
+<tr><th>Arrive</th><td>5 min after the announcement</td><td>5 min after the announcement</td></tr>
+<tr><th>Afterwards</th><td>—</td><td>reputation +20 if beaten off, −20 if lost; after a lost raid no people and no trade for 3 days</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th></th><th>Health</th><th>Hits</th><th>For</th></tr>
+</thead>
+<tbody>
+<tr><th>A soldier without gear</th><td>20</td><td>40 % of blows</td><td>1–2</td></tr>
+<tr><th>A raider</th><td>20</td><td>50 % of blows</td><td>2–4</td></tr>
+</tbody>
+</table>
+<p>A blow every 2 s; 3 s between two duels; a soldier heals one point of health every 30 s in their own building; a shield never pushes a hit chance below 5 %; a raider still standing carries off 16 slots of weight.</p>
+<!-- /generated -->
+
+<h2 id="when-a-raid-comes">When a raid comes</h2>
+
+<p><strong>Every settlement has a threat that grows every day, and a raid comes when it is full.</strong> After a
+grace period from the founding the threat grows at every change of day by a fixed amount plus one for every
+resident. When it reaches the threshold, a raid is announced and the threat starts again at 0. The raid brings
+one raider and one more for every so many residents, and arrives a few minutes after the announcement at a
+chunk on the edge of your land. All the numbers are in the table above.</p>
+
+<ul>
+<li><strong>The target is the nearest watchtower that has had a guard</strong>, and without one the charter; a
+  tower still waiting for its first guard is passed over.</li>
+<li><strong>A bigger settlement is raided more often and by more raiders.</strong> One of 12 residents sees its
+  first raid a good three weeks after the grace period; one of 40 sees one every eight days.</li>
+</ul>
+
+<h2 id="how-a-raid-is-fought">How a raid is fought</h2>
+
+<p><strong>A raid is fought in duels, one raider against one soldier, on several duel places at once.</strong>
+In each duel they strike in turn, blow for blow, the raider first; how often each hits and for how much is in the
+table above and on <a href="../settlement/soldiers.html">Soldiers and gear</a>. Three duels run at once unless the server
+<a href="../admin/gamerules.html">sets another number</a>.</p>
+
+<ul>
+<li><strong>The soldiers of the target defend first</strong>, then those of every watchtower and
+  <a href="../buildings/barracks.html">barracks</a> whose reach takes in the target, the nearest first.</li>
+<li><strong>Whoever loses a duel falls.</strong> A fallen soldier leaves the settlement, their post and bed come
+  free, and the gear they wore is lost.</li>
+<li><strong>The winner stays on their place with their wounds</strong> and, after a short pause, faces the next
+  opponent. Back in their own building a soldier heals slowly. A soldier fights in one raid at a time, and
+  in none while they are away on an <a href="attacks.html">attack</a>.</li>
+</ul>
+
+<p><strong>If every defender falls, the raiders plunder the store.</strong> Each raider still standing carries off
+a load of goods, the most valuable by the unit first — valued at what a village pays for them, emeralds one to
+one. A good no village pays for, like a torch, they never take. A settlement without a single
+defender is plundered as soon as the raiders arrive.</p>
+
+<h2 id="a-raid-on-a-village">A raid on a village</h2>
+
+<p><strong>A <a href="villages.html">connected village</a> has a threat of its own.</strong> It grows by one for
+every bed of the village on top of the fixed amount, its grace period runs from the day it was connected, and
+its raids bring one raider more for every few beds. It is defended by the soldiers of every watchtower and
+barracks whose reach takes in its <a href="../buildings/village-gate.html">gate</a>.</p>
+
+<ul>
+<li><strong>Fought off, the raid raises your reputation with the village; lost, it lowers it</strong>, and for a
+  few days the village sends neither people nor trade. The connection stays, and with it the protection of its
+  land.</li>
+<li><strong>When the connection ends, its threat ends</strong>, and a raid already announced against the village
+  is called off.</li>
+</ul>
+
+<h2 id="how-you-hear-of-it">How you hear of it</h2>
+
+<p><strong>Two lines in the chat for every raid</strong>, to everybody with a role in the settlement:</p>
+
+<ul>
+<li>when it is announced: <em>“X: 3 raiders are coming. Their target: Y.”</em>, or for a village <em>“X: 3
+  raiders are coming for a connected village.”</em></li>
+<li>when it ends: <em>“X fought off the raid. 1 soldier fell.”</em>, <em>“X lost the raid. 2 soldiers fell, and
+  the raiders carried off …”</em>, for a village <em>“X fought off the raid on its village: reputation +20. …”</em>
+  or <em>“X lost the raid on its village: reputation −20, and for 3 days it brings neither people nor trade.
+  …”</em>, and <em>“X: the raid has been called off.”</em> when it does not come.</li>
+</ul>
+
+<p><strong>A raid marker stands over the target</strong> from the announcement until the raid ends: a red label —
+<em>“Raid: 3 raiders”</em>, counting down as they fall — and a red beam about 48 blocks high that
+shows through ground and buildings, so you find the raid in a large settlement. Everybody with a role sees it;
+the place where the raiders arrive is not marked.</p>
+
+<p><strong>Each player switches both for themselves</strong>, on the
+<a href="../start/charter-screen.html#overview">overview</a> of the charter screen: <em>Raids in chat:
+on/off</em> for the two lines and <em>Raid markers: on/off</em> for the marker, both on by default.
+<strong>M does not hide the raid marker</strong> — it hides only the messages over buildings.</p>
+
+<p><strong>The overview of the charter screen</strong> shows the threat of the settlement and of every connected
+village against the threshold, or how much grace is left; every raid under way with its target and when it
+arrives — <em>“3 raiders are coming. Target: Watchtower 2, arriving in 5:00 min.”</em> — or how the fight stands;
+and the last raid with how it ended.</p>
+
+<h2 id="what-you-see">What you see</h2>
+
+<p><strong>If you stand near enough, a raid is a scene.</strong> But the outcome is settled before you see it: the
+figures show it, they do not decide it.</p>
+
+<ul>
+<li><strong>The raiders</strong> are figures of their own in the shape of a vindicator with an axe. They
+  wait just outside your land and march across the boundary in time to reach the target. A raid on a village
+  comes out of the village.</li>
+<li><strong>The soldiers who will fight gather at the target</strong> while the raiders come, and wait beside
+  its door.</li>
+<li><strong>The duels are fought in front of the target</strong>, in the open. A hit flashes red, a miss
+  glances off the shield. The fallen fall over and vanish. If the raiders have won, the rest of them walk
+  away.</li>
+<li><strong>A soldier shows what they carry</strong>: the weapon in one hand, the shield in the other, the
+  armour on the body.</li>
+<li><strong>Raiders attack no player, no villager and no block</strong>, they cannot be hurt, and their
+  vanishing changes nothing.</li>
+</ul>
+
+<p>See also: <a href="../settlement/soldiers.html">Soldiers and gear</a>, <a href="../buildings/watchtower.html">Watchtower</a>,
+<a href="../buildings/barracks.html">Barracks</a>, <a href="villages.html">Villages</a>, <a href="attacks.html">Attacks</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Your land</strong>: <a href="../land/boundary.html">Boundary and protection</a> · <a href="../land/villages.html">Villages</a> · <strong>Raids</strong> · <a href="../land/attacks.html">Attacks</a> · <a href="../buildings/watchtower.html">Watchtower</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

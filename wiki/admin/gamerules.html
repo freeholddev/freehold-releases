@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game rules and commands — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#for-server-admins">For server admins</a></p>
+<!-- /generated -->
+<h1>Game rules and commands</h1>
+
+<h2 id="game-rules">Game rules</h2>
+
+<p>Freehold adds ten game rules, all in the world creation screen under <em>Freehold</em>.</p>
+
+<table>
+<thead>
+<tr><th>Rule</th><th>Default</th><th>What it does</th></tr>
+</thead>
+<tbody>
+<tr><td><code>freehold:max_freeholds_per_player</code></td><td>0</td><td>How many freeholds one player may own at once, counted over every dimension of the server together. Only the freeholds the player owns count, not those they are a member of. 0 means no limit. A charter placed beyond it is refused: “You already own N freeholds, and this world allows no more.”</td></tr>
+<tr><td><code>freehold:spawn_protection</code></td><td>0</td><td>No freehold boundary may reach within this many blocks of the world spawn, for charters and watchtowers alike. 0 turns the protection off. A placement that would is refused: “No boundary may reach within N blocks of the world spawn.”</td></tr>
+<tr><td><code>freehold:raids</code></td><td>true</td><td>Whether raiders come for freeholds and the villages they have connected — see <a href="../land/raids.html">Raids</a>. When off, no threat grows, no raid begins and an announced one is called off; a fight already under way is fought to its end. A vanilla raid never starts at a connected village, whatever this rule says</td></tr>
+<tr><td><code>freehold:conquest</code></td><td>true</td><td>Whether freeholds of different owners may attack each other's watchtowers and charters — see <a href="../land/attacks.html">Attacks</a>. When off, no attack can be launched, an attack on the march is called off and its soldiers return home, and a fight that has begun is fought to its end. Raids hang on <code>freehold:raids</code> alone</td></tr>
+<tr><td><code>freehold:duel_slots</code></td><td>3</td><td>How many duels a raid or an attack fights at once, at least 1 — see <a href="../land/raids.html#how-a-raid-is-fought">Raids</a>. A change never ends a duel under way</td></tr>
+<tr><td><code>freehold:first_house_boost</code></td><td>4</td><td>How many times faster newcomers arrive while a settlement fills its first house, at least 1 — see <a href="../settlement/residents.html#how-people-move-in">How people move in</a>. With 1 there is no boost</td></tr>
+<tr><td><code>freehold:theme_choice</code></td><td>true</td><td>Whether a founder chooses the theme of their freehold when founding it — see <a href="themes.html">Themes</a>. When off, every new freehold is founded in the world's default theme, which an operator sets with <code>/freehold theme default</code></td></tr>
+<tr><td><code>freehold:hand_in_all_goods</code></td><td>false</td><td>Whether goods ports and hoppers take every good a settlement uses. When off, only the basic goods go in: axe, fishing rod, saw, hammer, hoe, food, planks and logs — see <a href="../settlement/goods.html#handing-goods-in">Handing goods in</a>. It takes effect at once; nothing comes out of the store either way</td></tr>
+<tr><td><code>freehold:protect_containers</code></td><td>true</td><td>Whether visitors and players without a role keep out of the chests, barrels, furnaces and other containers on a freehold's land, chest minecarts and chest boats included. When off, they open them; everything else on the land stays closed to them except doors and fence gates — see <a href="../land/boundary.html#using-what-stands-on-your-land">Using what stands on your land</a></td></tr>
+<tr><td><code>freehold:protect_goods_ports</code></td><td>false</td><td>Whether only the freeholder and the members hand goods in at a freehold's goods ports. When off, anybody may give a settlement goods — see <a href="../settlement/goods.html#handing-goods-in">Handing goods in</a>; nothing ever comes out of the store</td></tr>
+</tbody>
+</table>
+
+<p>Set them like any game rule, for example <code>/gamerule freehold:spawn_protection 200</code> or
+<code>/gamerule freehold:hand_in_all_goods true</code>.</p>
+
+<h2 id="commands">Commands</h2>
+
+<p><strong>Freehold has no command a player needs.</strong> The charter is crafted from an emerald and eight
+planks; an operator can also hand it out with <code>/give &lt;player&gt; freehold:charter</code>, and in creative
+mode it is in the <em>Freehold</em> tab — see <a href="../start/items-and-blocks.html">Items and blocks</a>.</p>
+
+<p><strong>Operators set the themes with <code>/freehold theme …</code></strong>: the world's default, the theme
+of one settlement, and the template and export with which a theme is made — every one of them is on
+<a href="themes.html#commands">Themes</a>.</p>
+
+<p><strong>An operator gives a settlement another name with
+<code>/freehold rename &lt;freehold&gt; &lt;name&gt;</code></strong> (level 2); its owner cannot. The settlement
+goes by its number in the dimension the command runs in — the numbers are suggested as you type, each with the
+settlement's name beside it. The name is the rest of the line, spaces included and without quotes, up to 32
+characters; colour codes and invisible characters are left out.</p>
+
+<table>
+<tr><th>Answer</th><th>When</th></tr>
+<tr><td>Freehold 1 is now Birkenhain (was Eichenau)</td><td>The name is changed; every other operator online sees it as well, and the server log keeps a line with the old name, the new one and who changed it</td></tr>
+<tr><td>Nothing of that name is left once formatting codes and invisible characters are taken out; freehold 1 stays Eichenau</td><td>Nothing is left of the name once it is cleaned</td></tr>
+<tr><td>No freehold 7 in this dimension</td><td>No settlement has that number in this dimension</td></tr>
+</table>
+
+<p><strong><code>/setblock</code> and <code>/fill</code> on a laid road hold only while its chunk stays
+loaded.</strong> The next time the chunk loads, the settlement lays the surface again and clears the two blocks over
+it — see <a href="../land/boundary.html#what-the-settlement-repairs">What the settlement repairs</a>. To take a road
+away for good, tear it up in the game, sneaking and right-clicking it — see
+<a href="../roads/tearing-up.html">Tearing up a road</a>.</p>
+
+<p><strong>Operators also see <code>/freehold blueprint …</code>.</strong> It is a tool for drawing buildings,
+not part of the game: it is not described here, it may change with any version, and
+<code>/freehold blueprint preview</code> sets real blocks. Leave it alone on a world you care about.</p>
+
+<h2 id="keys">Keys</h2>
+
+<p>Freehold has three keys, each of which can be moved in the controls menu under <em>Freehold</em>:
+<strong>V</strong> opens the charter screen, <strong>M</strong> hides or shows the messages over buildings,
+and holding <strong>N</strong> shows the building names and the borders of every settlement — see <a href="../start/controls.html">Controls</a>.</p>
+
+<p><strong>Whether the messages are shown is kept on the client</strong>, in
+<code>config/freehold-client.toml</code>, as <code>show_alerts = true</code> by default. Next to it stands
+<code>chat_alerts</code>, which messages also go into the chat: <code>BLOCKADES</code> by default,
+<code>WAITING</code> for blockades and waiting messages, or <code>OFF</code>; a resident leaving and a food or
+fuel shortage go with the blockades. The button on the overview of the charter screen sets the same value. Two more stand beside them for raids: <code>chat_raids = true</code>,
+whether the announcement and the end of a raid go into the chat, and <code>show_raids = true</code>, whether a
+raid's marker stands over its target — the two raid buttons on the overview set them. A modpack can ship any of
+them changed; a server never reads them.</p>
+
+<h2 id="the-saved-data">The saved data</h2>
+
+<p>Freehold keeps its settlements in the world's save, one file per dimension:
+<code>dimensions/&lt;namespace&gt;/&lt;dimension&gt;/data/freehold/level.dat</code>. <strong>If it cannot read
+the file, it says so and changes nothing.</strong> Freehold then runs nothing in that dimension and writes
+nothing, and every player who joins is told: “Freehold could not read its saved data for X. Nothing on
+disk has been changed; the reason is in the server log.” Fix the cause or put the file back from a backup, and
+restart; the world is as it was. A <code>/reload</code> does not read the save again.</p>
+
+<h2 id="when-the-simulation-stops">When the simulation stops</h2>
+
+<p><strong>An error in Freehold's simulation stops the settlements of that dimension, not the server.</strong>
+Freehold writes the error to the server log and stops running and saving the settlements of that dimension, so
+the last good save stays on disk. The world stays playable; only Freehold stands still there until the server
+restarts.</p>
+
+<p><strong>Every operator is told once.</strong> An operator online gets in chat, and one who joins later gets on
+joining: “Freehold has stopped the settlements of X: the simulation ran into an error, and its state is no longer
+saved. The world stays playable and the last save stays on disk; the reason is in the server log.” X is the
+dimension, such as <code>minecraft:overworld</code>. Players who are not operators are told nothing.</p>
+
+<p><strong>Report the error from the server log.</strong> A restart loads the last save, but will most likely
+run into the same error again.</p>
+
+<h2 id="the-server-log">The server log</h2>
+
+<p><strong>At INFO, Freehold logs only the warnings that stop a building</strong>; everything else is at
+DEBUG.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>For server admins</strong>: <strong>Game rules and commands</strong> · <a href="../admin/datapack.html">The datapack</a> · <a href="../admin/themes.html">Themes</a> · <a href="../admin/making-a-theme.html">Making a theme</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

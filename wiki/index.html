@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freehold Wiki</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><a href="index.html">Home</a> · <a href="index.html#getting-started">Getting started</a> · <a href="index.html#your-land">Your land</a> · <a href="index.html#roads">Roads</a> · <a href="index.html#the-settlement">The settlement</a> · <a href="buildings/index.html">Buildings</a> · <a href="index.html#for-server-admins">Server</a> · <a href="start/glossary.html">Glossary</a></nav>
+<main>
+<h1>Freehold Wiki</h1>
+
+<p><strong>Freehold</strong> is a settlement and economy mod for Minecraft — <em>Rule, don't manage.</em>
+You found a settlement with a charter, set the rules it runs by, and it organises itself: it gives its
+people work, makes and carries its goods, walks the roads you draw and pushes its boundary out. You
+decide what is built where and which policy holds, never who carries which log.</p>
+
+<p><strong>This wiki is the reference for all of it</strong>: every building, good and tool, every gesture
+and every message, the rules behind them, and what a server admin can set. New to Freehold? Start with
+<a href="start/first-steps.html">First steps</a>. A word you do not know? Look it up in the
+<a href="start/glossary.html">Glossary</a>.</p>
+
+<h2 id="key-ideas">Key ideas</h2>
+
+<ul>
+<li><strong>The settlement runs itself.</strong> It decides who works where, what is made next and which
+  carrier takes which load; you set the frame — see <a href="settlement/residents.html">Residents</a>.</li>
+<li><strong>The work is real, the people are a picture of it.</strong> The same planks are sawn at the same
+  moment whether you watch or are on the other side of the world.</li>
+<li><strong>Goods are carried, not teleported.</strong> Every load walks from door to door, so where you build
+  decides how fast things flow — see <a href="settlement/goods.html">Goods and carriers</a>.</li>
+<li><strong>Nothing is made without end.</strong> Every good has a ceiling that grows with the settlement,
+  so a full store does not stop everything — see <a href="settlement/goods.html#only-so-much-is-made">Only so
+  much is made</a>.</li>
+<li><strong>People need a fed bed.</strong> Newcomers arrive on their own, but only into a bed with food
+  in the house — see <a href="settlement/food.html">Food</a>.</li>
+</ul>
+
+<h2 id="this-version">This version</h2>
+
+<p><strong>Freehold is in public beta, at version 0.7.0.</strong> It is playable, but it is not finished, and it
+stays at <code>0.x</code> until <code>1.0</code>: a save may not carry over from one version to the next, and only
+<code>1.0</code> makes promises about compatibility.</p>
+
+<p><strong>What is in the game: wood, stone, food, iron, trade and defence.</strong>
+A settlement fells trees, saws planks, makes its own tools, quarries stone, grows
+wheat, catches fish, picks apples, grinds and bakes, chars charcoal, sinks a mine, smelts iron and forges it,
+brews beer and pours it in a tavern, and builds houses. Goods are carried from door to door, roads and
+junctions are drawn by hand, a watchtower pushes the boundary out, and the people have to eat. A village gate
+connects a neighbouring village, a trade post trades with it for emeralds, and soldiers in watchtowers and
+barracks fight off the raiders that come for the settlement, and can take the watchtowers of another. A building kept busy in a busy
+neighbourhood <a href="buildings/upgrades.html">rises to a second level</a> on its own.</p>
+
+<p><strong>Freehold needs Minecraft Java 26.1.2 and NeoForge 26.1.2.122 or newer</strong>, and it is installed on
+the server and on every client. With an older NeoForge the mod loader refuses to start it and names the missing
+dependency.</p>
+
+<p><strong>The charter is crafted from an emerald framed in eight planks</strong> — see
+<a href="start/first-steps.html#1-get-a-charter">First steps</a>.</p>
+
+<p><strong>Every number in this wiki is a starting value from the datapack</strong> and may change between
+versions. Costs, radii, growth times, storage room and the rate of immigration all sit in
+<code>data/freehold/</code> and a server can change them without touching the mod — see
+<a href="admin/datapack.html">The datapack</a>.</p>
+
+<h2 id="contents">Contents</h2>
+
+<h3 id="getting-started">Getting started</h3>
+
+<ul>
+<li><a href="start/first-steps.html">First steps</a> — from the charter to a settlement that feeds itself</li>
+<li><a href="start/founding.html">Founding a settlement</a> — where you may found, and what the charter brings</li>
+<li><a href="start/placing.html">Placing a building</a> — the model, how a building goes up, every refusal</li>
+<li><a href="start/controls.html">Controls</a> — every gesture and key</li>
+<li><a href="start/charter-screen.html">The charter screen</a> — overview, build queue, store, buildings, politics, attack, members and roles, and the card of a foreign settlement</li>
+<li><a href="start/items-and-blocks.html">Items and blocks</a> — everything the mod adds, and the creative tab</li>
+<li><a href="start/glossary.html">Glossary</a> — every term in this wiki, A to Z</li>
+</ul>
+
+<h3 id="your-land">Your land</h3>
+
+<ul>
+<li><a href="land/boundary.html">Boundary and protection</a> — what your claim keeps out, march stones, and seeing every border</li>
+<li><a href="land/villages.html">Villages</a> — connecting a village, what it brings, reputation</li>
+<li><a href="land/raids.html">Raids</a> — when raiders come, how a raid is fought, what you see</li>
+<li><a href="land/attacks.html">Attacks</a> — settlement against settlement, conquest, the end of a settlement</li>
+<li><a href="buildings/watchtower.html">Watchtower</a> — how the boundary grows</li>
+</ul>
+
+<h3 id="roads">Roads</h3>
+
+<ul>
+<li><a href="roads/drawing.html">Drawing a road</a> — ends, bends, slopes, water, every refusal</li>
+<li><a href="roads/laying.html">Once the route is finished</a> — building it, crossings, access, what a road forbids</li>
+<li><a href="roads/grades.html">Road grades</a> — how an earth road rises to wood and stone</li>
+<li><a href="roads/tearing-up.html">Tearing up a road</a> — stretch by stretch</li>
+</ul>
+
+<h3 id="the-settlement">The settlement</h3>
+
+<ul>
+<li><a href="settlement/residents.html">Residents</a> — who moves in, who gets which post, what the figures do</li>
+<li><a href="settlement/goods.html">Goods and carriers</a> — the store, carrying, distance, ceilings</li>
+<li><a href="settlement/goods-list.html">All goods</a> — weight, where from, where to</li>
+<li><a href="settlement/tools.html">Tools</a> — who needs which, wear, recipes</li>
+<li><a href="settlement/soldiers.html">Soldiers and gear</a> — who fights, weapons, shields, armour</li>
+<li><a href="settlement/stops.html">Messages</a> — what every message means</li>
+<li><a href="settlement/fire.html">The fire in a building</a> — reading a building from afar</li>
+<li><a href="settlement/food.html">Food</a> — eating, and the one rule that shrinks a settlement</li>
+</ul>
+
+<h3 id="buildings">Buildings</h3>
+
+<ul>
+<li><a href="buildings/index.html">All buildings</a>, <a href="buildings/chains.html">Production chains</a> and
+  <a href="buildings/upgrades.html">Upgrades</a> — when a building rises to level 2, and what it gains</li>
+<li>Settlement: <a href="buildings/charter.html">Charter</a>, <a href="buildings/house.html">House</a>,
+  <a href="buildings/storehouse.html">Storehouse</a>, <a href="buildings/builders-yard.html">Builders' Yard</a>,
+  <a href="buildings/tavern.html">Tavern</a></li>
+<li>Wood: <a href="buildings/lumberjack.html">Lumberjack</a>, <a href="buildings/forester.html">Forester</a>,
+  <a href="buildings/sawmill.html">Sawmill</a>, <a href="buildings/toolmaker.html">Toolmaker</a>,
+  <a href="buildings/charcoal-pile.html">Charcoal Pile</a></li>
+<li>Stone: <a href="buildings/quarry.html">Quarry</a>, <a href="buildings/opencast-quarry.html">Opencast Quarry</a>,
+  <a href="buildings/stonemason.html">Stonemason</a></li>
+<li>Food and drink: <a href="buildings/fishing-hut.html">Fishing Hut</a>, <a href="buildings/orchard.html">Orchard</a>, <a href="buildings/farm.html">Farm</a>,
+  <a href="buildings/windmill.html">Windmill</a>, <a href="buildings/bakery.html">Bakery</a>,
+  <a href="buildings/brewery.html">Brewery</a></li>
+<li>Iron: <a href="buildings/mine.html">Mine</a>, <a href="buildings/adit-mine.html">Adit Mine</a>,
+  <a href="buildings/smelter.html">Smelter</a>, <a href="buildings/smithy.html">Smithy</a></li>
+<li>Trade and defence: <a href="buildings/trade-post.html">Trade Post</a>,
+  <a href="buildings/village-gate.html">Village Gate</a>, <a href="buildings/watchtower.html">Watchtower</a>,
+  <a href="buildings/barracks.html">Barracks</a></li>
+</ul>
+
+<h3 id="for-server-admins">For server admins</h3>
+
+<ul>
+<li><a href="admin/gamerules.html">Game rules and commands</a> — the ten game rules, the commands, the keys, the saved data</li>
+<li><a href="admin/datapack.html">The datapack</a> — every number in this wiki, and where to change it</li>
+<li><a href="admin/themes.html">Themes</a> — another look for the buildings: choosing, installing, the commands</li>
+<li><a href="admin/making-a-theme.html">Making a theme</a> — rebuilding a building in the game and exporting it</li>
+</ul>
+</main>
+</body>
+</html>

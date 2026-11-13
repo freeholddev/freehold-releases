@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Village Gate — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../buildings/index.html">Buildings</a> › Trade and defence</p>
+<!-- /generated -->
+<h1>Village Gate</h1>
+
+<!-- generated: building:village_gate -->
+<table class="facts">
+<tbody>
+<tr><th>Costs</th><td>12 planks, 8 stones</td></tr>
+<tr><th>Building work</th><td>120 work units, the material paid in 1 stage; up to 2 builders at once — about 2 min for one builder with a hammer</td></tr>
+<tr><th>Link road</th><td>an earth road from the gate in a straight line to the nearest village path, at most 32 blocks away</td></tr>
+<tr><th>Needs</th><td>the ground may vary by up to 2 blocks over the site</td></tr>
+<tr><th>Versions</th><td>Standard</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p>The village gate connects a neighbouring village to your settlement. Only a connected village sends you
+people, trades with your <a href="trade-post.html">trade posts</a> and is protected like your own land — what
+that brings is on <a href="../land/villages.html">Villages</a>. The gate has no post and nobody works in it.</p>
+
+<h2 id="where-it-stands">Where it stands</h2>
+
+<p><strong>A gate stands on your land, right beside the land of a village.</strong> A village's land is every
+chunk with one of its beds in it and one chunk all round; the gate's chunk has to touch it edge to edge. Three
+refusals belong to the gate alone:</p>
+
+<table>
+<thead>
+<tr><th>Reason</th><th>What to do</th></tr>
+</thead>
+<tbody>
+<tr><td>A village gate stands on your land right beside the land of a village.</td><td>Move it to the edge of a village's land; push your boundary there with a <a href="watchtower.html">watchtower</a> first if you have to</td></tr>
+<tr><td>This village is already connected to a settlement, or one of your gates is already placed for it.</td><td>A village takes one gate; see below</td></tr>
+<tr><td>No village path lies within N blocks of the gate for it to link up with.</td><td>Move the gate nearer to the village's paths</td></tr>
+</tbody>
+</table>
+
+<p><strong>The gate turns itself.</strong> Its front always faces the settlement, away from the village, and
+the scroll wheel does not turn it.</p>
+
+<h2 id="the-link-road">The link road</h2>
+
+<p><strong>The settlement lays a link road from the gate into the village by itself.</strong> When you place the
+gate it plans an earth road from the gate in a straight line to the nearest block of village path, at most as
+far as the table above says, over your land and the land of that village only. It is built once the gate
+stands, and runs out through the gate's frame into the village.</p>
+
+<ul>
+<li><strong>It is the one stretch of road outside your land.</strong> Every road you draw stays on your land;
+  the link road is laid by the settlement and never drawn.</li>
+<li><strong>It is not part of your road network.</strong> It counts no trips, makes no crossing, does not rise
+  to wood or stone, and cannot be read, torn up or upgraded with the road gestures.</li>
+</ul>
+
+<h2 id="connecting-the-village">Connecting the village</h2>
+
+<p><strong>A village is connected while the gate stands, its link road is finished and one of your finished
+roads ends at the gate.</strong> So after the gate, draw an ordinary road from the settlement to its front. Until
+all three hold, the gate says what is missing:</p>
+
+<ul>
+<li><em>“X is waiting for its link road into the village to be laid.”</em> — a waiting message; the builders
+  are on it.</li>
+<li><em>“X does not connect its village yet: draw a road from the gate into the settlement.”</em> — a blockade.</li>
+<li><em>“X does not connect its village: another gate holds it already.”</em> — a hint.</li>
+</ul>
+
+<p><strong>A village is connected to one settlement at most — whoever comes first.</strong> A second settlement can
+only connect it once the first loses the connection: its gate is torn down, its road to the gate is gone, or its
+land no longer touches the village.</p>
+
+<p><strong>The gate takes everything with it.</strong> Tear it down, and the link road and the road that ends at
+the gate go too, as they do with any building.</p>
+
+<h2 id="on-the-charter-screen">On the charter screen</h2>
+
+<p>The buildings tab says where the gate stands: <em>“This gate stands at no village.”</em>, <em>“Will connect a
+village of N beds once it stands.”</em>, <em>“Connects a village of N beds; reputation there R.”</em>, or what
+is still missing. It also names the soldiers that stand by the village, and after a lost raid how long the
+village still rests: <em>“After a lost raid it brings neither people nor trade for 1:00 h more.”</em> — see
+<a href="../land/raids.html#a-raid-on-a-village">Raids</a>.</p>
+
+<p>See also: <a href="../land/villages.html">Villages</a>, <a href="trade-post.html">Trade Post</a>,
+<a href="../roads/drawing.html">Drawing a road</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Buildings</strong>: <a href="../buildings/index.html">All buildings</a> · <a href="../buildings/chains.html">Production chains</a> · <a href="../buildings/upgrades.html">Upgrades</a></p>
+<p><strong>Settlement</strong>: <a href="../buildings/charter.html">Charter</a> · <a href="../buildings/house.html">House</a> · <a href="../buildings/storehouse.html">Storehouse</a> · <a href="../buildings/builders-yard.html">Builders' Yard</a> · <a href="../buildings/tavern.html">Tavern</a></p>
+<p><strong>Wood</strong>: <a href="../buildings/lumberjack.html">Lumberjack</a> · <a href="../buildings/forester.html">Forester</a> · <a href="../buildings/sawmill.html">Sawmill</a> · <a href="../buildings/toolmaker.html">Toolmaker</a> · <a href="../buildings/charcoal-pile.html">Charcoal Pile</a></p>
+<p><strong>Stone</strong>: <a href="../buildings/quarry.html">Quarry</a> · <a href="../buildings/opencast-quarry.html">Opencast Quarry</a> · <a href="../buildings/stonemason.html">Stonemason</a></p>
+<p><strong>Food and drink</strong>: <a href="../buildings/fishing-hut.html">Fishing Hut</a> · <a href="../buildings/orchard.html">Orchard</a> · <a href="../buildings/farm.html">Farm</a> · <a href="../buildings/windmill.html">Windmill</a> · <a href="../buildings/bakery.html">Bakery</a> · <a href="../buildings/brewery.html">Brewery</a></p>
+<p><strong>Iron</strong>: <a href="../buildings/mine.html">Mine</a> · <a href="../buildings/adit-mine.html">Adit Mine</a> · <a href="../buildings/smelter.html">Smelter</a> · <a href="../buildings/smithy.html">Smithy</a></p>
+<p><strong>Trade and defence</strong>: <a href="../buildings/trade-post.html">Trade Post</a> · <strong>Village Gate</strong> · <a href="../buildings/watchtower.html">Watchtower</a> · <a href="../buildings/barracks.html">Barracks</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

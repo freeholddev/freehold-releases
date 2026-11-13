@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goods and carriers — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#the-settlement">The settlement</a></p>
+<!-- /generated -->
+<h1>Goods and carriers</h1>
+
+<h2 id="the-store">The store</h2>
+
+<p><strong>The store is a weight, not an inventory.</strong> The charter gives it room for 2 400 slots and
+every <a href="../buildings/storehouse.html">storehouse</a> 1 200 more; planks weigh 3 each, raw wood 6,
+bread 1, a tool 2 — every weight is on <a href="goods-list.html">All goods</a>. There is no chest to
+open, and <strong>nothing comes back out</strong> — you can give, not take.</p>
+
+<h2 id="handing-goods-in">Handing goods in</h2>
+
+<p><strong>The goods port takes basic goods only, and the settlement makes everything else itself.</strong>
+Right-click the goods port of the charter or a storehouse with a stack in hand, or let a hopper feed it. Basic
+are:</p>
+
+<ul>
+<li>the tools <strong>axe, fishing rod, saw, hammer and hoe</strong>;</li>
+<li>the food <strong>bread, fish</strong> (cod and salmon) <strong>and fruit</strong> (apples);</li>
+<li><strong>planks and logs</strong> of every kind of wood.</li>
+</ul>
+
+<p><strong>Anybody may hand goods in, unless the server says otherwise.</strong> A visitor or a player without a
+role may give the settlement goods at its goods ports; a server can keep that to the freeholder and the members.</p>
+
+<p>Anything else — the pickaxe and shovel, rubble, ashlar, fittings, iron, fuel, torches, beer, emeralds, a
+soldier's gear — is refused with <em>“The settlement makes X for itself; only basic goods are handed in
+here.”</em>, and a hopper simply keeps it. A settlement can still build everything: every building of level 1
+costs only planks or goods the settlement's own buildings make. Saplings are never taken: foresters and orchards
+plant without them.</p>
+
+<p><strong>A server can open the store to every good</strong>; then the goods port takes everything that has an
+item. Both settings are on <a href="../admin/gamerules.html#game-rules">Game rules</a>.</p>
+
+<p><strong>Nothing comes out of the store, not even into a hopper.</strong> What lies in the store leaves it
+only through the settlement: by building, by being used up, by trade, or carried off by raiders.</p>
+
+<h2 id="goods-do-not-teleport">Goods do not teleport</h2>
+
+<p>Every building has <strong>two piles of its own</strong>: what has been delivered to it, and
+what it has made and nobody has fetched yet. It works out of its own pile and puts what it makes
+on its own pile — no building reaches into the store from across the settlement.</p>
+
+<p>What moves goods between the piles and the store is a <strong>carrier</strong>, and there is
+always at least one: the first resident of any settlement becomes one, before the
+builder and before any work place. That is the one thing worth knowing in advance,
+because it means <strong>a settlement needs one resident more than it has posts.</strong> With
+the four you start with that works out exactly: a carrier, a builder, a feller and a
+sawyer. The forester is the one that has to wait for a fifth resident, and a house is
+what lets one move in.</p>
+
+<p><strong>Goods go the short way, and that is not always through the store.</strong> If a building
+makes something another one uses, and the two are close enough to each other, a carrier
+takes the load straight across instead of walking it into the store and out again. The
+settlement works it out per trip and takes whichever is shorter — so a hut standing next to its sawmill feeds
+it directly even when the store is nearer to both. Nothing about it is announced; you
+see it by watching where the carrier walks.</p>
+
+<p><strong>A carrier moves a load, not the whole order.</strong> One trip carries <strong>12 slots of storage
+weight</strong> — two logs, four planks, twelve loaves — and whatever does not fit follows on a
+later trip. Most deliveries to a house fit in one; the planks for a building stage and a
+pile that has been left standing do not. <strong>A cart triples that.</strong> Your toolmaker builds
+one from six planks and two fittings, a carrier without one takes it out of the store the
+next time it sets off, and from then on it moves 36. A cart wears out after 120 trips; a
+carrier who stops carrying leaves it in the store. The toolmaker keeps a spare for every
+carrier and two more, so once your smithy makes fittings, carts look after themselves.</p>
+
+<p><strong>And a carrier brings something back rather than two walking the same way.</strong> When one
+is already on its way to a building, nothing else is sent there in the meantime: the one
+arriving picks up whatever is waiting and carries it off on its way home. Building your
+producers near the places that use them is therefore worth twice — the load goes direct,
+and the carrier comes home loaded.</p>
+
+<p><strong>Distance matters, and so does the ground.</strong> How long a trip takes comes from the way
+between the two ends: its length, every block it climbs or drops, and water or a scarp a walker has to go
+round. A building on the flat a stone's throw from the store is served in a few seconds; the same building
+across a ravine takes many times that. So <strong>where you put a building is a decision about supply</strong>
+— and a road makes delivery faster rather than possible. Carriers walk round finished buildings, so a
+settlement gets a little slower as it builds itself up, which is what a road answers.</p>
+
+<p><strong>A building is reached only if it has a way to a store</strong>: within <strong>256 blocks</strong>
+of the charter or a storehouse, through a building within that range it trades goods with, or along a finished
+road. Without any of them it says <em>“X cannot be reached: there is no way to it from anywhere in the
+settlement.”</em> and will not start. The way out is a road from it to a building that is reached, or a
+storehouse within range. Inside the charter's own claim this cannot happen; it matters at the edge of land that
+watchtowers have grown far out.</p>
+
+<p><strong>A site and the finished building need different goods</strong>, so a building can be cut off
+although it could be built: a house's site is reached through a sawmill near it, but the finished house needs
+bread and fuel. It says so as soon as it stands.</p>
+
+<p>Four consequences you will see:</p>
+
+<ul>
+<li><strong>A building keeps working while a carrier is walking.</strong> That is what the piles
+  are for. A trip is not a standstill.</li>
+<li><strong>Far-flung buildings are the ones that starve first.</strong> With one carrier and four
+  buildings, the far one waits longest — the carrier is walking, not idle. More
+  residents mean more carriers.</li>
+<li><strong>A busy carrier pays every distance twice.</strong> Its next errand starts where the
+  last one ended, so serving two buildings on opposite sides of the settlement costs
+  the way back in between. Building close together is worth as much as building
+  close to the store.</li>
+<li><strong>A full store stops the fetching, and the fetching stops the work.</strong> Nobody can
+  unload into a store with no room, so the pile at the building fills up, and then
+  the job stops. The message stands at the building where you can see it, and the
+  settlement says the store is the reason.</li>
+</ul>
+
+<p><strong>A storehouse is a second door, not a second pile</strong> — it adds room, and a trip that
+runs over a store runs over the nearer one. See <a href="../buildings/storehouse.html">Storehouse</a>.</p>
+
+<h2 id="targets-and-thresholds">Targets and thresholds</h2>
+
+<p>Each building keeps a target for what it consumes and a threshold for what it
+makes: it orders up to the target and is fetched from once it is over the
+threshold. <strong>Both are yours to change</strong> on the
+buildings tab of the charter screen — never per building: a target for every building of one kind and
+level, a threshold for every building of one kind. See
+<a href="../start/charter-screen.html#buildings">The charter screen</a>.</p>
+
+<p><strong>Raising a target buys a buffer, and pays for it in walking.</strong> A sawmill that
+wants twenty raw wood instead of twelve keeps sawing longer while its carrier is
+away, but the wood is out of the store the whole time and cannot go anywhere else.
+<strong>Lowering a threshold fetches earlier and walks more often</strong>, which is worth doing
+where the walk is short and wasteful where it is long.</p>
+
+<h2 id="who-gets-a-scarce-good">Who gets a scarce good</h2>
+
+<p><strong>Between buildings of one kind, a scarce good goes to the one furthest short of its target.</strong>
+Two sawmills waiting for raw wood are served by who lacks more.</p>
+
+<p><strong>Between kinds, the share decides.</strong> Some goods are used by two or more kinds of building,
+or by a workshop and your building sites, listed below. Each of these kinds has a share of the good, in per
+cent, and the shares of one good always add up to 100.</p>
+
+<p><strong>The building sites count as one kind.</strong> Planks, fittings and rubble are used by sites and by
+workshops alike; every site, upgrade and road in the queue together are one kind, <em>Building sites</em>. So a
+long queue does not stop the toolmaker. Among themselves the sites go by the order of the
+<a href="../start/charter-screen.html#build">build queue</a>.</p>
+
+<p><strong>A hearth counts as a kind like a workshop.</strong> The fuel for the hearths of your houses is shared
+out with the bakery, brewery, smelter, smithy and toolmaker. So when fuel is short, the houses get their share
+and no more — and from level 2 a house with a cold hearth takes nobody in, see
+<a href="fire.html">The fire in a building</a>.</p>
+
+<!-- generated: shares -->
+<table>
+<thead>
+<tr><th>Good</th><th>Shares it starts with</th></tr>
+</thead>
+<tbody>
+<tr><td>Fittings</td><td><a href="../start/glossary.html#site">Building sites</a> 75 %, <a href="../buildings/toolmaker.html">Toolmaker</a> 25 %</td></tr>
+<tr><td>Fuel</td><td><a href="../buildings/smelter.html">Smelter</a> 27 %, <a href="../buildings/smithy.html">Smithy</a> 18 %, <a href="../buildings/toolmaker.html">Toolmaker</a> 18 %, <a href="../buildings/bakery.html">Bakery</a> 14 %, <a href="../buildings/brewery.html">Brewery</a> 13 %, <a href="../buildings/house.html">House</a> 10 %</td></tr>
+<tr><td>Planks</td><td><a href="../start/glossary.html#site">Building sites</a> 75 %, <a href="../buildings/toolmaker.html">Toolmaker</a> 25 %</td></tr>
+<tr><td>Raw Wood</td><td><a href="../buildings/sawmill.html">Sawmill</a> 70 %, <a href="../buildings/charcoal-pile.html">Charcoal Pile</a> 30 %</td></tr>
+<tr><td>Rubble</td><td><a href="../start/glossary.html#site">Building sites</a> 75 %, <a href="../buildings/stonemason.html">Stonemason</a> 25 %</td></tr>
+<tr><td>Wheat</td><td><a href="../buildings/windmill.html">Windmill</a> 70 %, <a href="../buildings/brewery.html">Brewery</a> 30 %</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<ul>
+<li><strong>The next load goes to the kind furthest behind its share.</strong> A share you
+  change takes hold after a few loads.</li>
+<li><strong>At 0 % a kind only gets what nobody else is waiting for.</strong></li>
+<li><strong>Nothing is left lying.</strong> If one kind wants nothing at the moment, the others get the rest,
+  beyond their share too. A share says who is served first while the good is scarce; it never holds a good
+  back.</li>
+<li><strong>The shares are yours to change</strong> on the politics tab of the charter screen: giving one kind
+  more takes it from the others in proportion to their shares — see
+  <a href="../start/charter-screen.html#who-gets-a-scarce-good">Who gets a scarce good</a>.</li>
+</ul>
+
+<h2 id="only-so-much-is-made">Only so much is made</h2>
+
+<ul>
+<li><strong>Every trade stops when the settlement has enough.</strong> The rule is not only about
+  tools, see the <a href="../buildings/toolmaker.html">toolmaker</a>: a
+  settlement wants a bounded amount of anything, and above it nothing is made. The
+  sawmill stops when there are enough planks, the lumberjack when there is enough raw
+  wood, and each of them says "has stopped: the settlement has
+  enough" and names the good. <strong>What "enough" is grows with the settlement</strong>, because
+  it counts who uses the good — every sawmill wants raw wood in front of it, the
+  toolmaker wants planks, and <strong>every builder's place counts for the material it
+  builds with</strong>, so a builders' yard raises the plank stock the settlement keeps ready.
+  Spend the good and the work starts again on its own: lay out one building and the
+  sawmill goes back to sawing.</li>
+<li><strong>Trade posts raise the ceiling by their sale targets</strong>, so the settlement goes on making a
+  good to have a surplus to sell — see <a href="../buildings/trade-post.html#selling">Selling</a>.</li>
+<li><strong>The ceiling bounds what is made, never what you hand in yourself.</strong> If
+  you want a great pile of planks in reserve, build another storehouse and hand them in.</li>
+</ul>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>The settlement</strong>: <a href="../settlement/residents.html">Residents</a> · <strong>Goods and carriers</strong> · <a href="../settlement/goods-list.html">All goods</a> · <a href="../settlement/tools.html">Tools</a> · <a href="../settlement/soldiers.html">Soldiers and gear</a> · <a href="../settlement/stops.html">Messages</a> · <a href="../settlement/fire.html">The fire in a building</a> · <a href="../settlement/food.html">Food</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watchtower — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../buildings/index.html">Buildings</a> › Trade and defence</p>
+<!-- /generated -->
+<h1>Watchtower</h1>
+
+<!-- generated: building:watchtower -->
+<table class="facts">
+<tbody>
+<tr><th>Costs</th><td>56 planks, 16 torches</td></tr>
+<tr><th>Building work</th><td>700 work units, the material paid in 4 stages; up to 4 builders at once — about 11 min 40 s for one builder with a hammer</td></tr>
+<tr><th>Posts</th><td>1 soldier</td></tr>
+<tr><th>Beds</th><td>1</td></tr>
+<tr><th>Stands by</th><td>its soldiers fight for every watchtower, charter and village gate within 96 blocks, anchor to anchor</td></tr>
+<tr><th>Land</th><td>9×9 chunks around the chunk it stands in; at least 3 chunks from the charter and every other tower</td></tr>
+<tr><th>Needs</th><td>the ground may vary by up to 3 blocks over the site</td></tr>
+<tr><th>Versions</th><td>Standard, Open lookout</td></tr>
+<tr><th>Level 2</th><td>2 soldiers; 2 beds</td></tr>
+<tr><th>Upgrade to 2</th><td>28 planks, 16 ashlars, 4 fittings; 700 work units in 4 stages; once 8 people work and live within 48 blocks of it and it has run 1 day without a problem</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p><strong>A watchtower pushes the boundary out once its first guard takes the post.</strong> From then on it
+claims <strong>9×9 chunks</strong> around the chunk it stands in; the charter holds 7×7. A site claims nothing,
+and neither does a finished tower whose post nobody has taken yet — it says so with the hint <em>“Watchtower 2
+waits for its first guard: until one takes the post, it claims no land and cannot be attacked.”</em> A tower has
+to be built inside your land like any building, so one at the edge moves the boundary up to 64 blocks further
+out, and a second one on the new land moves it again. While you place it, the outline of the whole square stands
+around the model.</p>
+
+<p><strong>A watchtower costs torches as well as planks</strong>, and torches need fuel. Your
+<a href="toolmaker.html">toolmaker</a> makes them out of fuel, and the way to fuel is a
+<a href="charcoal-pile.html">charcoal pile</a>, which costs nothing but planks. Until a toolmaker is placed, the
+watchtower stays grey on the build tab. In short: <strong>no fuel, no new land.</strong></p>
+
+<p><strong>You may build right up to a neighbour or a village — the square simply stops there.</strong>
+It takes nothing that already belongs to another freehold, and it keeps one chunk clear around every chunk of a
+village that has a bed in it. If a neighbour later gives land up, your towers take in what they had to leave
+out. <strong>Towers keep their distance:</strong> a tower has to stand at least <strong>3 chunks</strong> from
+your charter and from every other tower of yours. When the first guard takes the post, the chat says how many
+chunks you gained — <em>“Watchtower 2 is manned: Oakhill now claims 32 more chunks.”</em> —, a yellow line shows
+the new square for ten seconds, the march stones move out to the new edge, and the villages near the new
+boundary are found — see <a href="../land/villages.html">Villages</a>.</p>
+
+<p><strong>Once manned, a watchtower holds its land for as long as it stands</strong>, also when the guard
+leaves the post later. Only tearing the tower down gives the land up, and that is refused while a building, a
+site or a road of yours stands on ground that would go with it — the message says how many of each, and they
+have to go first. Ground that the charter or another tower also covers never goes.</p>
+
+<p><strong>A watchtower's guard is a soldier, and the tower is where raiders come.</strong> The nearest tower
+that has had a guard is the target of a <a href="../land/raids.html">raid</a> on your settlement, and its guard
+fights first. The guards of every tower within reach of a target — the number is in the table above — fight
+after those of the target, whether the target is another tower, the charter or a village gate. A guard carries
+the gear the settlement brings them — see <a href="../settlement/soldiers.html">Soldiers and gear</a>.</p>
+
+<p><strong>A watchtower can be conquered.</strong> The soldiers of another settlement may
+<a href="../land/attacks.html">attack</a> it once it has had a guard; if they win, the tower is theirs, with the
+land only it held, and whatever of yours stood on that land is torn down with nothing returned.
+<strong>A tower keeps one guard</strong> when it sends soldiers out on an attack of its own, so a tower of level 1
+sends none.</p>
+
+<ul>
+<li><strong>A fallen guard's post is filled from a barracks first.</strong> If a
+  <a href="barracks.html">barracks</a> has the tower within its reach, one of its soldiers moves up, with their
+  gear and their wounds; otherwise the settlement fills the post like any other.</li>
+<li><strong>Standing guard counts as work.</strong> The guard keeps their post even with nothing to do. After dark the guard walks a round of the tower with a torch; by day they are at their post
+  inside.</li>
+</ul>
+
+<h2 id="level-2">Level 2</h2>
+
+<p><strong>At level 2 the watchtower has two guards and two beds instead of one.</strong> It rises like any
+building with a post — an empty post or a message holds it back; the rules are on
+<a href="upgrades.html">Upgrades</a>, the cost and the neighbourhood it needs in the table at the top of this
+page. <strong>Its land stays the same</strong>: a tower of level 2 holds as many chunks as one of level 1.</p>
+
+<ul>
+<li><strong>You can tell it by stone and lanterns:</strong> the guard room is masoned all round under a shaft of
+  timber, lanterns hang instead of torches, and the two beds stand one behind the other at the east
+  wall.</li>
+</ul>
+
+<p>See also: <a href="../land/boundary.html">Boundary and protection</a>, <a href="../land/villages.html">Villages</a>,
+<a href="../land/raids.html">Raids</a>, <a href="../land/attacks.html">Attacks</a>, <a href="barracks.html">Barracks</a>, <a href="charcoal-pile.html">Charcoal Pile</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Buildings</strong>: <a href="../buildings/index.html">All buildings</a> · <a href="../buildings/chains.html">Production chains</a> · <a href="../buildings/upgrades.html">Upgrades</a></p>
+<p><strong>Settlement</strong>: <a href="../buildings/charter.html">Charter</a> · <a href="../buildings/house.html">House</a> · <a href="../buildings/storehouse.html">Storehouse</a> · <a href="../buildings/builders-yard.html">Builders' Yard</a> · <a href="../buildings/tavern.html">Tavern</a></p>
+<p><strong>Wood</strong>: <a href="../buildings/lumberjack.html">Lumberjack</a> · <a href="../buildings/forester.html">Forester</a> · <a href="../buildings/sawmill.html">Sawmill</a> · <a href="../buildings/toolmaker.html">Toolmaker</a> · <a href="../buildings/charcoal-pile.html">Charcoal Pile</a></p>
+<p><strong>Stone</strong>: <a href="../buildings/quarry.html">Quarry</a> · <a href="../buildings/opencast-quarry.html">Opencast Quarry</a> · <a href="../buildings/stonemason.html">Stonemason</a></p>
+<p><strong>Food and drink</strong>: <a href="../buildings/fishing-hut.html">Fishing Hut</a> · <a href="../buildings/orchard.html">Orchard</a> · <a href="../buildings/farm.html">Farm</a> · <a href="../buildings/windmill.html">Windmill</a> · <a href="../buildings/bakery.html">Bakery</a> · <a href="../buildings/brewery.html">Brewery</a></p>
+<p><strong>Iron</strong>: <a href="../buildings/mine.html">Mine</a> · <a href="../buildings/adit-mine.html">Adit Mine</a> · <a href="../buildings/smelter.html">Smelter</a> · <a href="../buildings/smithy.html">Smithy</a></p>
+<p><strong>Trade and defence</strong>: <a href="../buildings/trade-post.html">Trade Post</a> · <a href="../buildings/village-gate.html">Village Gate</a> · <strong>Watchtower</strong> · <a href="../buildings/barracks.html">Barracks</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

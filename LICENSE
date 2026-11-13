@@ -1,0 +1,40 @@
+Freehold — All rights reserved
+
+Copyright (c) 2026 Steffen Hamann
+
+All rights in this software and in the assets shipped with it are reserved.
+No permission is granted to copy, modify, merge, publish, distribute,
+sublicense or sell copies of this work, or to create derivative works from it,
+except as expressly stated below.
+
+## The one permission that is granted: modpacks
+
+You may include Freehold in a modpack, public or private, on any platform, and
+you may redistribute the unmodified mod file as part of that pack. No request
+is necessary. This permission also covers:
+
+- **Configuration and datapacks.** You may change the starting values, and you
+  may write and ship your own goods, building and blueprint definitions
+  alongside the mod.
+
+- **Derived assets, if you name where they came from.** Textures, models and
+  blueprints that start from ours may be shipped with your pack, provided the
+  pack states that they are derived from Freehold. ASSETS-LICENSE.md says
+  which files count as assets.
+
+Your own resource packs and your own datapacks do not need this permission at
+all: shipping work you made yourself redistributes nothing of ours.
+
+Nothing here grants the right to redistribute the mod outside a modpack, to
+publish modified builds of the mod itself, or to use the name Freehold for
+another work.
+
+## Contributions
+
+Contributions from outside the project cannot be accepted under these terms
+without a separate agreement.
+
+## Not legal advice
+
+These terms were written by the author, not by a lawyer. For a binding
+assessment, ask one.

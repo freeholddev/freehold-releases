@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drawing a road — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#roads">Roads</a></p>
+<!-- /generated -->
+<h1>Drawing a road</h1>
+
+<p>Pick <strong>Earth Road</strong> from the build list — the only road it offers; wooden and stone roads
+are never drawn, the settlement lays them over a busy earth road that meets the higher grade at one end (see <a href="grades.html">Road
+grades</a>). You are in the placement mode again, but this time you are drawing a line rather than putting
+down a box.</p>
+
+<p><strong>A white mark on the ground shows where you are pointing.</strong> It sits about four
+blocks straight ahead of you — you aim by walking and turning, not with the
+crosshair, exactly as when placing a building. Everything below happens at that
+mark.</p>
+
+<ol>
+<li><strong>Put the mark on a building and click.</strong> That is where the route starts, and it
+  starts at the building's road side — the spot in front of its door, not the
+  middle of it. <strong>A road of your settlement is an end as well, built or planned</strong>: put the mark
+  anywhere on it and it will snap to the middle of that road. Anything else cannot
+  be an end, and the line under the figures keeps saying so until the mark is on one.
+  See <a href="#an-end-on-a-road">An end on a road</a> for how close to a crossing or a door it may lie.</li>
+<li><strong>Click wherever you want the route to bend.</strong> Between two points it runs dead
+  straight; there is no path-finding. The bend is
+  the whole decision: <strong>round the hill, or straight up it.</strong> Lead the route out on
+  the <strong>door side</strong> of the building: a leg that cuts back across the house is
+  refused, and the columns that do it turn red so you can see where.</li>
+<li><strong>Sneak and click on a second building — or on a road</strong> — to finish, or press
+  <strong>escape</strong> to give the route up.</li>
+</ol>
+
+<p><strong>While you draw, the roads of your settlement that are not laid yet lie on the ground as pale blue
+plates</strong>. Click one and the end snaps to that road, as it does on a built one — so several roads and
+their crossings can be planned before the first of them has laid a block. A road of another settlement is never
+an end.</p>
+
+<p>While you draw, four figures stand above the hotbar and change with every step you
+take: how long the route is and how much of it is already paved, what it would cost
+in work, what in material, and <strong>how long a trip takes now against how long it would
+take then</strong>. That last pair is the point of the whole thing.</p>
+
+<h2 id="how-the-road-takes-the-ground">How the road takes the ground</h2>
+
+<p>The drawing on the ground shows the road as it will be built, and the figures above the hotbar include the
+earth it moves. <strong>It makes no difference which of the two ends you draw from</strong>: the same route
+gives the same road and the same price.</p>
+
+<ul>
+<li><strong>An earth road is stepped, not flat</strong>: each column may rise or fall one block from the one
+  before. A line straight up a hillside cannot get the height onto its length and is refused; the refusal says
+  how many columns it is short. Take a wider bend and it fits.</li>
+<li><strong>A short rise is cut through instead of climbed</strong>, and a low ridge as well. Only a slope
+  that keeps going up is climbed all the way.</li>
+<li><strong>A shallow hollow is filled instead of dipped into.</strong> A deeper or wider one is followed
+  down.</li>
+<li><strong>A shallow ford is crossed, anything deeper is not.</strong> Over a brook the road becomes a
+  causeway, up to <strong>three blocks</strong> deep. Deeper water is refused, and the refusal says how deep it
+  was. There is no bridge, so lead the route around a pond. The same holds for lava.</li>
+<li><strong>A road can climb a cliff by cutting into it</strong>, and it may run up on piled earth to a
+  building that stands above its surroundings.</li>
+</ul>
+
+<h2 id="what-the-line-above-the-hotbar-says">What the line above the hotbar says</h2>
+
+<table>
+<thead>
+<tr><th>Line</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>A road runs from a building to a building, or to another road, built or planned.</td><td>The mark is on nothing a road can start or end at</td></tr>
+<tr><td>Lead the route away from this building; a click here sets nothing.</td><td>The point would lie on the building you started from</td></tr>
+<tr><td>Right-click to bend the route. Sneak and right-click on a building or a road to finish it.</td><td>The route has its start and waits for the next point</td></tr>
+<tr><td>The route is too steep: it would have to be N columns longer.</td><td>Take a wider bend</td></tr>
+<tr><td>The route would have to be filled N blocks deep here — that is no longer a brook.</td><td>Deeper than three blocks: lead the route around the water</td></tr>
+<tr><td>The route leaves the boundary of the freehold.</td><td>Every point has to lie on your own land</td></tr>
+<tr><td>The route runs across the footprint of a building.</td><td>Bend it around the building</td></tr>
+<tr><td>These two ends already have a road of this grade.</td><td>There is one already</td></tr>
+<tr><td>The end lies too close to a building or junction: it is N blocks short.</td><td>An end on a road has to keep 5 blocks from the next building or crossing; on a crossing of the road you point at, or near one, it lands on that crossing instead — see <a href="#an-end-on-a-road">An end on a road</a></td></tr>
+</tbody>
+</table>
+
+<p>The four figures read <em>Length</em>, <em>Work</em>, <em>Material</em> and <em>Travel time</em>. The
+travel time is given as <em>now → then</em> in seconds or minutes — <em>Travel time: 34 s → 20 s</em> — and says
+“estimated” where
+part of the way has not been measured yet; until the route has its second end it has nothing to
+compare.</p>
+
+<p><strong>Where two roads meet, a crossing appears by itself</strong>, once both roads are finished. From
+the crossing on, both roads are one network, and a trip may run over as many of them as it likes. That is why a
+road you end <em>on another road</em> is worth building: joining a third building to two others takes one short
+road to the road that is there, not two more roads from house to house.</p>
+
+<p><strong>An earth road is faster than open ground</strong>, a little over twice as fast on the flat, and it makes the
+<em>whole</em> way level, with no climbing and nothing to walk around. Once it rises to a
+<a href="grades.html">wooden or stone road</a> it is faster still. What a road saves a trip, and when a carrier
+takes it, is on <a href="laying.html#walking-on-it">Walking on it</a>.</p>
+
+<h2 id="an-end-on-a-road">An end on a road</h2>
+
+<p><strong>An end on a road keeps 5 blocks from every building and every crossing of the settlement</strong>, so
+that no two crossings and no crossing and door crowd each other. Closer, the end is refused with <em>“The end
+lies too close to a building or junction …”</em>. Two cases are spared:</p>
+
+<ul>
+<li><strong>An end right on a crossing is allowed.</strong> The new road joins that crossing — a crossing of three
+  arms becomes one of four.</li>
+<li><strong>Click near a crossing of the road you are pointing at, and the end lands on it</strong> instead of
+  being refused; the drawn line jumps to it so you can see.</li>
+</ul>
+
+<p><strong>Just in front of a building's door, click the building itself</strong> instead of the road.</p>
+
+<p>See also: <a href="laying.html">Once the route is finished</a>, <a href="grades.html">Road grades</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Roads</strong>: <strong>Drawing a road</strong> · <a href="../roads/laying.html">Once the route is finished</a> · <a href="../roads/grades.html">Road grades</a> · <a href="../roads/tearing-up.html">Tearing up a road</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forester — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../buildings/index.html">Buildings</a> › Wood</p>
+<!-- /generated -->
+<h1>Forester</h1>
+
+<!-- generated: building:forester -->
+<table class="facts">
+<tbody>
+<tr><th>Costs</th><td>16 planks</td></tr>
+<tr><th>Building work</th><td>200 work units, the material paid in 2 stages; up to 2 builders at once — about 3 min 20 s for one builder with a hammer</td></tr>
+<tr><th>Posts</th><td>1 worker</td></tr>
+<tr><th>Tool</th><td>Hoe, one per worker</td></tr>
+<tr><th>Makes</th><td>a sapling planted every 2 min</td></tr>
+<tr><th>Reach</th><td>32 blocks</td></tr>
+<tr><th>Grows</th><td>10 min after planting</td></tr>
+<tr><th>Needs</th><td>the ground may vary by up to 2 blocks over the site</td></tr>
+<tr><th>Versions</th><td>Standard, Half-hipped roof</td></tr>
+<tr><th>Level 2</th><td>works at 150 % pace</td></tr>
+<tr><th>Upgrade to 2</th><td>8 planks, 12 ashlars, 2 fittings; 200 work units in 2 stages; once 8 people work and live within 48 blocks of it and it has run 1 day without a problem</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p>The forester plants trees within its reach, so that the forest your
+<a href="lumberjack.html">lumberjacks</a> fell grows back. <strong>It needs nothing delivered</strong>: a sapling is
+not a good of the settlement, and the forester plants as long as a spot in its reach is free, whether a lumberjack
+stands nearby or not. When none is left it says <em>“… has no free planting spot left within its work
+radius.”</em> It plants twice as fast as one lumberjack fells, so beside one hut the wood grows until no spot is
+left free.</p>
+
+<ul>
+<li><strong>Trees grow on the settlement's time</strong>, about half a Minecraft day after the
+  forester plants them, whatever vanilla would do. Vanilla may still grow one of its own
+  saplings earlier; that is harmless.</li>
+<li><strong>The forester plants scattered, not in rows</strong>, and keeps clear of walls, of roads and of an
+  <a href="orchard.html">orchard</a>'s plantation.</li>
+</ul>
+
+<h2 id="which-trees-it-plants">Which trees it plants</h2>
+
+<p><strong>The forester plants the trees of the biome the spot lies in</strong> — spruce in the taiga, birch in a
+birch forest, acacia in the savanna, cherry in a cherry grove, small jungle trees in the jungle. Many biomes mix in
+a second kind, a forest one birch to four oaks. <strong>Which kind a spot gets depends on the spot alone</strong>:
+the same spot always gets the same kind.</p>
+
+<ul>
+<li><strong>The biome is read at the spot, not at the hut.</strong> A forester on a biome border plants differently
+  on either side of it.</li>
+<li><strong>Wood is wood.</strong> Every kind of tree brings the same raw wood, at the same pace.</li>
+<li><strong>Dark oak, pale oak and mangrove are never planted</strong>, because they do not grow from a single
+  sapling on plain ground. In the dark forest the forester plants oak and birch, in the pale garden birch, in a
+  mangrove swamp oak.</li>
+<li><strong>A biome of another mod gets the trees of its kind</strong> as long as that mod files it under the
+  usual biome tags; a biome the table does not reach gets oak.</li>
+<li><strong>The <a href="orchard.html">orchard</a> plants oaks wherever it stands</strong>, because the apples hang
+  on them.</li>
+</ul>
+
+<!-- generated: saplings -->
+<table>
+<thead>
+<tr><th>Biome</th><th>Plants</th></tr>
+</thead>
+<tbody>
+<tr><td>Plains, sunflower plains</td><td>oak and birch, 5 to 1</td></tr>
+<tr><td>Forest, flower forest</td><td>oak and birch, 4 to 1</td></tr>
+<tr><td>Birch forest, old growth birch forest, pale garden</td><td>birch</td></tr>
+<tr><td>Dark forest</td><td>oak and birch, 3 to 1</td></tr>
+<tr><td>Meadow</td><td>oak and birch, 1 to 1</td></tr>
+<tr><td>Cherry grove</td><td>cherry</td></tr>
+<tr><td>Taiga, snowy taiga, old growth pine taiga, old growth spruce taiga, grove, snowy plains, ice spikes, snowy slopes, frozen peaks, jagged peaks, snowy beach, frozen river</td><td>spruce</td></tr>
+<tr><td>Windswept hills, windswept gravelly hills, windswept forest</td><td>spruce and oak, 2 to 1</td></tr>
+<tr><td>Jungle, bamboo jungle</td><td>jungle and oak, 3 to 1</td></tr>
+<tr><td>Sparse jungle</td><td>jungle and oak, 2 to 1</td></tr>
+<tr><td>Savanna, savanna plateau, windswept savanna</td><td>acacia and oak, 4 to 1</td></tr>
+</tbody>
+</table>
+<p>A biome not named above takes the first of these tags it carries, in this order:</p>
+<table>
+<thead>
+<tr><th>Biome tag</th><th>Plants</th></tr>
+</thead>
+<tbody>
+<tr><td><code>#c:primary_wood_type/spruce</code></td><td>spruce</td></tr>
+<tr><td><code>#c:primary_wood_type/birch</code></td><td>birch</td></tr>
+<tr><td><code>#c:primary_wood_type/acacia</code></td><td>acacia and oak, 4 to 1</td></tr>
+<tr><td><code>#c:primary_wood_type/jungle</code></td><td>jungle and oak, 3 to 1</td></tr>
+<tr><td><code>#c:primary_wood_type/bamboo</code></td><td>jungle and oak, 3 to 1</td></tr>
+<tr><td><code>#c:primary_wood_type/cherry</code></td><td>cherry</td></tr>
+<tr><td><code>#c:primary_wood_type/dark_oak</code></td><td>oak and birch, 3 to 1</td></tr>
+<tr><td><code>#c:primary_wood_type/pale_oak</code></td><td>birch</td></tr>
+<tr><td><code>#c:primary_wood_type/oak</code></td><td>oak</td></tr>
+<tr><td><code>#c:is_birch_forest</code></td><td>birch</td></tr>
+<tr><td><code>#minecraft:is_taiga</code></td><td>spruce</td></tr>
+<tr><td><code>#c:is_dark_forest</code></td><td>oak and birch, 3 to 1</td></tr>
+<tr><td><code>#minecraft:is_jungle</code></td><td>jungle and oak, 3 to 1</td></tr>
+<tr><td><code>#minecraft:is_savanna</code></td><td>acacia and oak, 4 to 1</td></tr>
+<tr><td><code>#c:is_snowy</code></td><td>spruce</td></tr>
+<tr><td><code>#minecraft:is_forest</code></td><td>oak and birch, 4 to 1</td></tr>
+<tr><td><code>#c:is_cold</code></td><td>spruce</td></tr>
+<tr><td>None of them</td><td>oak</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p>A server can change the table with a datapack — see
+<a href="../admin/datapack.html#saplings">saplings.json</a>.</p>
+
+<h2 id="level-2">Level 2</h2>
+
+<p><strong>At level 2 the forester works at 150 % pace</strong>: planting a sapling takes 80 seconds instead of 120. The rules of every upgrade are on <a href="upgrades.html">Upgrades</a>; the cost and the neighbourhood it needs are in the table at the top of this page.</p>
+
+<ul>
+<li><strong>You can tell it by stone and lanterns:</strong> its walls are masoned, and lanterns hang in place of torches.</li>
+</ul>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Buildings</strong>: <a href="../buildings/index.html">All buildings</a> · <a href="../buildings/chains.html">Production chains</a> · <a href="../buildings/upgrades.html">Upgrades</a></p>
+<p><strong>Settlement</strong>: <a href="../buildings/charter.html">Charter</a> · <a href="../buildings/house.html">House</a> · <a href="../buildings/storehouse.html">Storehouse</a> · <a href="../buildings/builders-yard.html">Builders' Yard</a> · <a href="../buildings/tavern.html">Tavern</a></p>
+<p><strong>Wood</strong>: <a href="../buildings/lumberjack.html">Lumberjack</a> · <strong>Forester</strong> · <a href="../buildings/sawmill.html">Sawmill</a> · <a href="../buildings/toolmaker.html">Toolmaker</a> · <a href="../buildings/charcoal-pile.html">Charcoal Pile</a></p>
+<p><strong>Stone</strong>: <a href="../buildings/quarry.html">Quarry</a> · <a href="../buildings/opencast-quarry.html">Opencast Quarry</a> · <a href="../buildings/stonemason.html">Stonemason</a></p>
+<p><strong>Food and drink</strong>: <a href="../buildings/fishing-hut.html">Fishing Hut</a> · <a href="../buildings/orchard.html">Orchard</a> · <a href="../buildings/farm.html">Farm</a> · <a href="../buildings/windmill.html">Windmill</a> · <a href="../buildings/bakery.html">Bakery</a> · <a href="../buildings/brewery.html">Brewery</a></p>
+<p><strong>Iron</strong>: <a href="../buildings/mine.html">Mine</a> · <a href="../buildings/adit-mine.html">Adit Mine</a> · <a href="../buildings/smelter.html">Smelter</a> · <a href="../buildings/smithy.html">Smithy</a></p>
+<p><strong>Trade and defence</strong>: <a href="../buildings/trade-post.html">Trade Post</a> · <a href="../buildings/village-gate.html">Village Gate</a> · <a href="../buildings/watchtower.html">Watchtower</a> · <a href="../buildings/barracks.html">Barracks</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

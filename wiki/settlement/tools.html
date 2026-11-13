@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#the-settlement">The settlement</a></p>
+<!-- /generated -->
+<h1>Tools</h1>
+
+<p>Every filled work place and every builder's place needs one tool, and the
+<strong>building</strong> holds them, not the person. A tool counts the jobs it has done, and the
+cart, which is not a tool of any post, counts trips.</p>
+
+<!-- generated: tools -->
+<table>
+<thead>
+<tr><th>Tool</th><th>Who works with it</th><th>Lasts</th><th>Hand in as</th><th>Made by</th></tr>
+</thead>
+<tbody>
+<tr><td>Axe</td><td><a href="../buildings/lumberjack.html">Lumberjack</a></td><td>40 jobs</td><td>wooden axe</td><td><a href="../buildings/toolmaker.html">Toolmaker</a></td></tr>
+<tr><td>Bellows</td><td><a href="../buildings/smelter.html">Smelter</a></td><td>60 jobs</td><td>only if the server allows every good: bellows</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, crafting table</td></tr>
+<tr><td>Brew Kettle</td><td><a href="../buildings/brewery.html">Brewery</a></td><td>40 jobs</td><td>only if the server allows every good: brew kettle</td><td><a href="../buildings/smithy.html">Smithy</a>, crafting table</td></tr>
+<tr><td>Cart</td><td>carriers: 36 slots of weight a trip instead of 12</td><td>120 trips</td><td>only if the server allows every good: cart</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, crafting table</td></tr>
+<tr><td>Chisel</td><td><a href="../buildings/stonemason.html">Stonemason</a></td><td>40 jobs</td><td>only if the server allows every good: chisel</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, crafting table</td></tr>
+<tr><td>Fishing Rod</td><td><a href="../buildings/fishing-hut.html">Fishing Hut</a></td><td>40 jobs</td><td>fishing rod</td><td><a href="../buildings/toolmaker.html">Toolmaker</a></td></tr>
+<tr><td>Hammer</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, <a href="../buildings/smithy.html">Smithy</a>, every builder's post</td><td>40 jobs; a builder's hammer counts building stages</td><td>hammer</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, crafting table</td></tr>
+<tr><td>Hoe</td><td><a href="../buildings/forester.html">Forester</a>, <a href="../buildings/orchard.html">Orchard</a>, <a href="../buildings/farm.html">Farm</a></td><td>40 jobs</td><td>wooden hoe</td><td><a href="../buildings/toolmaker.html">Toolmaker</a></td></tr>
+<tr><td>Pickaxe</td><td><a href="../buildings/quarry.html">Quarry</a>, <a href="../buildings/opencast-quarry.html">Opencast Quarry</a>, <a href="../buildings/mine.html">Mine</a>, <a href="../buildings/adit-mine.html">Adit Mine</a></td><td>40 jobs</td><td>only if the server allows every good: wooden pickaxe</td><td><a href="../buildings/toolmaker.html">Toolmaker</a></td></tr>
+<tr><td>Saw</td><td><a href="../buildings/sawmill.html">Sawmill</a></td><td>80 jobs</td><td>saw</td><td><a href="../buildings/toolmaker.html">Toolmaker</a>, crafting table</td></tr>
+<tr><td>Shovel</td><td><a href="../buildings/charcoal-pile.html">Charcoal Pile</a>, <a href="../buildings/windmill.html">Windmill</a>, <a href="../buildings/bakery.html">Bakery</a></td><td>40 jobs</td><td>only if the server allows every good: wooden shovel</td><td><a href="../buildings/toolmaker.html">Toolmaker</a></td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<p><strong>A vanilla tool stands for itself.</strong> Axe, hoe, pickaxe and shovel are the wooden
+vanilla ones, and a vanilla fishing rod counts as a fishing rod — your toolmaker makes it out of
+planks alone, without string. The shovel is the baker's peel, the collier's spade and the miller's
+scoop. Saw, hammer, chisel, bellows and brew kettle are Freehold items with a
+<a href="#recipes">crafting recipe</a>; the brew kettle is also forged by your smithy. The cart has a
+recipe too. <strong>Only axe, fishing rod, saw, hammer and hoe go in at a goods port</strong>; the others only
+if the server allows every good — see <a href="goods.html#handing-goods-in">Handing goods in</a>.</p>
+
+<p><strong>Your settlement starts equipped — for the chain that makes tools, and for its first
+food.</strong> The charter brings seven tools: the lumberjack's axe, the forester's hoe, the sawmill's saw, a
+hammer each for the toolmaker and your first builder, and the fishing hut's rod and a second hoe for the
+orchard. <strong>Everything you build after that is equipped by your toolmaker</strong> — the two hammers of
+a builders' yard, the quarry's pickaxe, the stonemason's chisel, the bakery's shovel.</p>
+
+<h2 id="how-tools-work">How tools work</h2>
+
+<ul>
+<li><strong>Missing tools slow work down; they never stop it.</strong> A trade working without
+  its tool takes three times as long, a site without a hammer builds three times
+  as slowly, and a building that is half equipped lands in between. The message
+  says "is working with incomplete gear" and names what is missing — that is a
+  hint and not a stoppage, so it is worth reading rather than fixing at once.</li>
+<li><strong>A building waits if its tool is already on the way.</strong> A job keeps the pace it
+  started with, so a lumberjack that sets off one minute before its axe arrives would spend the whole tree at
+  triple time. It therefore stands still until the carrier gets there, says "has not started yet" and names
+  the tool, and then works at full speed. If the settlement has no axe at all, the felling starts anyway and is
+  simply slow.</li>
+<li><strong>Tools wear out and break.</strong> A tool counts finished pieces of work, not time:
+  an axe survives forty fellings, which is about eight settlement days for a
+  lumberjack at work all day. A hammer counts
+  finished building stages, which is several finished buildings. The toolmaker
+  makes new ones out of planks, so a settlement that has one keeps itself equipped
+  without you. A
+  worn tool you hand in counts as a whole one.</li>
+<li><strong>You can make the five basic ones yourself and hand them into the goods port</strong>, exactly
+  like planks: axe, fishing rod, saw, hammer and hoe. The charter's kit already covers a slow start; handing
+  tools in is the way to run ahead of your toolmaker — and if you ever do run the
+  settlement dry, the hammer is the one to make first: it is the tool of the toolmaker
+  and of every builder's place there is.</li>
+</ul>
+
+<h2 id="recipes">Recipes</h2>
+
+<p><strong>None of these recipes shows in the recipe book</strong>, not even once you hold the
+ingredients — this page is where they stand; the only Freehold recipe in the book is the
+<a href="../start/items-and-blocks.html#the-charter-recipe">charter</a>. All of them are made at a crafting table, and all are
+shaped. <strong>P</strong> is any planks, <strong>S</strong> a stick, <strong>I</strong> an iron ingot:</p>
+
+<pre>    Saw            Hammer         Chisel        Bellows       Brew kettle      Cart
+
+  P  P  P        P  P  P            P            P  P  S        S  I  S        P     P
+     S           P  S  P            S            P  P  S        I     I        P  P  P
+                    S                                           I  I  I        S  I  S</pre>
+
+<p>The cart is not a tool: it belongs to a carrier, not to a post. A carrier without one takes it
+out of the store. A cart you make yourself goes in only if the server allows every good; otherwise carts
+come from your toolmaker once your smithy makes fittings.</p>
+
+<p>A soldier's spear, shield, sword and armour are gear, not tools: they wear out by the day — see
+<a href="soldiers.html">Soldiers and gear</a>.</p>
+
+<p>See also: <a href="../buildings/toolmaker.html">Toolmaker</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>The settlement</strong>: <a href="../settlement/residents.html">Residents</a> · <a href="../settlement/goods.html">Goods and carriers</a> · <a href="../settlement/goods-list.html">All goods</a> · <strong>Tools</strong> · <a href="../settlement/soldiers.html">Soldiers and gear</a> · <a href="../settlement/stops.html">Messages</a> · <a href="../settlement/fire.html">The fire in a building</a> · <a href="../settlement/food.html">Food</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

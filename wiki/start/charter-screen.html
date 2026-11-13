@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The charter screen — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#getting-started">Getting started</a></p>
+<!-- /generated -->
+<h1>The charter screen</h1>
+
+<p>The <strong>charter screen</strong> is where the settlement is read. <strong>V</strong> opens it wherever you
+stand, and the key can be moved in the controls menu under "Freehold". Which settlement
+it shows follows from where you are: the one whose territory you are standing in, and
+outside anybody's territory the one you looked at last. Tabs down the left edge switch
+between what it holds.</p>
+
+<p><strong>What you see of a settlement depends on the role you hold in it.</strong> The freeholder and the
+members see the whole screen and work its buttons. A visitor reads every tab but changes nothing: the buttons
+are grey, and so is the <em>Build</em> tab. Whoever holds no role in a settlement sees only its
+<a href="#the-card">card</a>.</p>
+
+<p><strong>It stays live while it is open.</strong> The numbers keep moving, the game does not stop,
+and a carrier that arrives while you are reading changes the figure under your eyes.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Where the key lands: the state of the settlement at a glance, and <strong>everything it is waiting
+for</strong>, gathered in one list instead of floating over the roofs one at a time. From top to bottom:</p>
+
+<ul>
+<li><strong>People:</strong> how old the settlement is, how many residents it has and what they do — builders,
+  carriers, workers, soldiers, without a post —, how many beds are free, how many houses have a cold hearth, and
+  how many carriers it has against how many it needs.</li>
+<li><strong>Food and fuel:</strong> how much is in stock and how that has changed over three days — <em>Food:
+  41 in stock, down 12 over 3 days.</em> —, in gold while it is
+  <a href="../settlement/stops.html#running-short">running short</a>.</li>
+<li><strong>Land and villages:</strong> how many chunks the settlement holds, and every
+  <a href="../land/villages.html">village</a> near it with its beds, its distance and whether it is
+  connected.</li>
+<li><strong>Raids and attacks:</strong> the threat against its threshold or the grace still left, every
+  <a href="../land/raids.html">raid</a> and <a href="../land/attacks.html#how-you-hear-of-it">attack</a> under
+  way with its target and arrival, and how the last one ended.</li>
+<li><strong><em>What it is waiting for</em></strong>, which says <em>Nothing to report</em> when all is
+  well.</li>
+</ul>
+
+<p><strong>The list is ordered by kind</strong>: first <em>Standing until you act</em>, the blockades; then
+<em>Already being cleared</em>, what the settlement is sorting out itself; last <em>Could go better</em>, the
+hints. <strong>The button under the heading sets which messages also go into the chat</strong> — <em>Chat:
+blockades only</em>, the default, <em>Chat: blockades and waiting</em>, or <em>Chat: off</em>. See
+<a href="../settlement/stops.html">Messages</a>. <strong>Two more buttons are about raids</strong>: <em>Raids in
+chat: on/off</em> and <em>Raid markers: on/off</em>, both on by default — see
+<a href="../land/raids.html#how-you-hear-of-it">Raids</a>. All three hold for your game only.</p>
+
+<h2 id="build">Build</h2>
+
+<p>What is already in the queue and how far each site has come, then
+what else can be built, what it costs, and what you have. Hold the cursor over
+an entry to read what the building is for.</p>
+
+<p><strong>A building is grey and cannot be picked while a good it costs cannot reach the settlement</strong>
+— none of it lies in the store, you may not hand it in, no building of yours makes it and no trade post buys
+it. A building that makes it counts from the moment it is placed, so a chain can be planned ahead. The tooltip
+of a grey entry names what is missing: <em>“Nothing in this settlement makes Ashlar yet, and it cannot be
+handed in. Place a building that makes it first.”</em> In a new settlement the stonemason opens most of the
+grey buildings — see <a href="../buildings/chains.html#what-has-to-stand-first">Production chains</a>. On a
+server that <a href="../settlement/goods.html#handing-goods-in">allows every good to be handed in</a>, nothing
+is grey.</p>
+
+<p><strong>The queue order is yours</strong>: the two
+small buttons beside a site move it one place up or down, and builders always
+go to the first site of its kind on the list that can be worked on. <strong>A site only
+holds so many</strong> — two at a small building, three at a middling one, four at a large
+— so once you have more builders than the first site can use, the rest walk on to
+the next one and your settlement raises two at a time. How they divide between
+buildings and roads is the politics tab's, and a line under the queue says how it
+currently stands. <strong>Upgrades stand in the queue as well</strong>, as <em>House 3, upgrade to level 2,
+waiting for its goods</em> and then with their stage, and move up and down like any other site — see
+<a href="../buildings/upgrades.html">Upgrades</a>. <strong>Under the queue stands the list <em>Ready for an
+upgrade</em></strong>: the buildings that may rise and are not in the queue yet, each with what the settlement
+says about it in grey. Its order is yours too, with the same two buttons, and the top one is the next to go on
+the queue — see <a href="../buildings/upgrades.html#the-upgrade-list">The upgrade list</a>. There is no button to
+cancel a site — to give one up, sneak and right-click it in the world, the same
+as tearing down anything else. <strong>Until its anchor block is built, any block of the
+site will do</strong>, the levelled ground included; after that, only the anchor.</p>
+
+<h2 id="store">Store</h2>
+
+<p>Every good in the store: how many there are, how many slots the pile
+takes, and how many more a carrier is holding on the way in. <strong>There is no other
+place to read the store</strong>, and nothing can be taken out of it by hand. The cursor
+over a row says what the good is.</p>
+
+<p>The goods stand under headings — wood, stone, food, iron, tools, supplies, defence and trade — and only
+goods that are in the store or on the way in are shown.</p>
+
+<h2 id="buildings">Buildings</h2>
+
+<p>Every building on the left under its name and <a href="../buildings/index.html#building-numbers">number</a>,
+such as <em>Watchtower 2</em>, and the one you pick on the right: who
+works there, what is on the bench, and <strong>both of its own stacks</strong> against the
+numbers they are measured by. A stack under its target is a carrier that is
+owed. <strong>Those two numbers are yours to set</strong>, with the small buttons beside each
+line — hold shift for ten at a time, and the star resets one to its default.
+<strong>A target you set holds for every building of that kind on the same level</strong> as the one
+shown, the ones already standing and the ones you have not built yet: turn a sawmill of level 1 up and
+every sawmill of level 1 wants more. A building that rises to
+<a href="../buildings/upgrades.html">level 2</a> goes by what is set for level 2, so set both levels if you
+want both changed, each at a building of that level. The star puts a target back to the default of its
+level and is grey while the target stands there. <strong>A threshold holds for every building of that
+kind</strong>, whatever its level. The buttons grey out where the number cannot go: a good the building
+actually consumes never drops to nothing, and a threshold never rises so far that
+a finished job would have nowhere to put its result.</p>
+
+<p><strong>A button above the list chooses which kind of building it shows.</strong> It reads <em>All</em>, or
+the chosen kind with its count, <em>Trade post (3)</em>; a click opens the list of kinds to choose from. The
+filter is not kept: every time the screen opens it reads <em>All</em>.</p>
+
+<p><strong>The list and the building on the right scroll each on their own</strong>, with the scroll wheel
+over the one you want to move.</p>
+
+<p><strong>A building site shows its bill instead</strong>, one line per good under <em>Comes in:</em>, such as
+<em>Torch: 11 of 16</em>. The first number is what the site has of that good — built in already plus lying at
+the site —, the second the whole bill; what is missing is the difference. What a carrier is bringing right now
+is on the line <em>On the way here: …</em>. These lines have no buttons, since a bill is not something you set,
+and nothing stands under <em>Goes out:</em>. That matters most for goods that never pass the store: a carrier
+takes torches from the toolmaker straight to a watchtower's site, so a store without torches does not mean none
+are being made.</p>
+
+<p><strong>It says what the building is doing</strong> — <em>At work, 1:05 min to go.</em> — and, depending on
+the building, more: a <a href="../buildings/trade-post.html">trade post</a> its partner village, when the trader
+is back and its purchase targets under <em>Buys up to:</em>; a <a href="../buildings/village-gate.html">village
+gate</a> its village and the soldiers who stand by it; a watchtower or barracks every soldier with their health
+and the days their gear has left, and <em>(away on an attack)</em> for one who is out on an
+<a href="../land/attacks.html">attack</a>. <strong>Every time on the charter screen is real time</strong>: seconds under a
+minute (<em>45 s</em>), minutes and seconds under an hour (<em>2:05 min</em>), hours and minutes above
+(<em>1:30 h</em>), as long as the server runs at full speed.</p>
+
+<p><strong>It also says where the building stands on its way up</strong>: its level (<em>Level 1 of 2.</em>),
+how many people work and live around it against how many are needed, how long it has run without a
+problem, its pace if it is faster, and one line on why it is or is not being upgraded. Every one of those
+lines is on <a href="../buildings/upgrades.html#reading-it-on-the-charter-screen">Upgrades</a>.</p>
+
+<p><strong>A building from an older version of its drawing has a button <em>Lift to current drawing</em></strong>
+next to <em>Done</em>. It rebuilds the building to today's drawing, for nothing, so that the settlement repairs
+it again — see <a href="../land/boundary.html#what-the-settlement-repairs">What the settlement repairs</a>.</p>
+
+<h2 id="politics">Politics</h2>
+
+<p><strong>The politics tab holds three levers, two rankings and the ore share of the mines</strong>: the standing
+rules you set rather than manage.</p>
+
+<h3 id="the-levers">The levers</h3>
+
+<p>Each lever is a percentage with the same three small buttons. <strong>Build before production</strong> is how
+much of your workforce takes a building site instead of a work bench: at 100
+everybody who can build, builds; at 0 a single builder always stays.
+<strong>Buildings before roads</strong> is how your builders divide between the two kinds of
+site in the queue: at 100 a road is only built while no building site can be
+worked on, and what the division leaves over always goes to the buildings.
+<strong>Upgrade before new building</strong> is how much of the builders an upgrade may take
+while upgrades and new sites wait together, at buildings and at roads alike; it starts at 50, and the star resets it to that
+rather than to 100. At 0 nothing is upgraded at all, no building and no road — see
+<a href="../buildings/upgrades.html#upgrade-before-new-building">Upgrades</a> and
+<a href="../roads/grades.html#when-a-road-rises">Road grades</a>. Under
+the levers stands what they are doing right now — who is posted where, who is
+standing on which kind of site, what is in the queue to divide them over, and how many
+upgrades are in it with how many builders.
+<strong>A policy is a rule and not an order:</strong> with one builder, or with no road on the
+queue, a dial can move and nothing will follow, and those lines are how you see
+why.</p>
+
+<h3 id="where-a-free-resident-goes">Where a free resident goes</h3>
+
+<p><strong>A list of every kind of building with work posts, the first at the top: a resident without a post
+takes the first free post on it that has work.</strong> The arrows <strong>↑</strong> and <strong>↓</strong> move a
+line one place; the star by the heading resets the starting order. Each line says how many posts of
+its kind are held, <em>“2. Fishing Hut · 2 of 3 posts held”</em>; a kind your settlement has not built yet stands
+grey with <em>not built</em>. When a settlement loses its last carrier, the worker on the lowest post of this list
+becomes the carrier. What the order starts as and how posts are filled is on
+<a href="../settlement/residents.html#who-does-what">Residents</a>.</p>
+
+<h3 id="who-gets-a-scarce-good">Who gets a scarce good</h3>
+
+<p><strong>For every good two or more kinds of building use, each of these kinds has a share in per cent</strong>,
+<em>“Sawmill: 70 %”</em>, with <strong>-</strong> and <strong>+</strong> beside it: five at a time, twenty-five with
+<strong>Shift</strong>. <strong>Your building sites are one of these kinds</strong>, <em>“Building sites: 75 %”</em>,
+wherever a workshop works with a good they are built with. <strong>A good's shares always add up to 100</strong>: giving one kind more takes it from the
+others in proportion to their shares — raise the smelter's fuel from 27 to 32, and the smithy and the toolmaker have
+17 each, the bakery 13, the brewery 12 and the house 9. The star stands by the good, <em>Fuel</em> or <em>Raw Wood</em>, and puts
+all its kinds back to their starting shares. How a share works out, and what the shares start at, is on
+<a href="../settlement/goods.html#who-gets-a-scarce-good">Who gets a scarce good</a>.</p>
+
+<h3 id="what-a-mine-digs">What a mine digs</h3>
+
+<p><strong>Every mine digs coal and iron ore in the proportion you set here</strong>, shown as
+<em>“Digging coal: 50 %”</em> and <em>“Digging iron ore: 50 %”</em>; the two always add up to 100, and they start at
+50 each. It is one setting for the whole settlement, for the <a href="../buildings/mine.html">mine</a> and the
+<a href="../buildings/adit-mine.html">adit mine</a> alike. <strong>Turning one ore up turns the other down</strong>: a
+click on <strong>-</strong> or <strong>+</strong> moves five, <strong>Shift</strong> twenty-five, and the star by the
+heading resets them to 50 to 50.</p>
+
+<p><strong>An ore the settlement has enough of, or that a mine has none of left, is skipped</strong>, and the
+other one takes the work. <strong>At 0 an ore is never dug</strong>; a mine that could dig it says so — see
+<a href="../buildings/mine.html">Mine</a>. The section only shows once a mine stands.</p>
+
+<h2 id="attack">Attack</h2>
+
+<p><strong>Every foreign watchtower your soldiers reach, the nearest first</strong> — and a foreign charter, once no
+tower of its settlement stands — each with an attack line: which target, out of which of your buildings' reach,
+how many soldiers can go and how far it is. <strong>−</strong> and <strong>+</strong> set how many go, and
+<em>Attack with N</em> sends them. A line that cannot be used is grey and says why. Only the freeholder and the
+members see the lines. Everything about it is on <a href="../land/attacks.html">Attacks</a>.</p>
+
+<h2 id="members">Members</h2>
+
+<p><strong>Every role in the settlement, the freeholder first</strong>, then the members and the visitors, each by
+name. Everybody with a role sees the tab, a visitor too. <strong>Roles are given out and taken away by the
+freeholder alone</strong>; everybody else sees those buttons grey.</p>
+
+<ul>
+<li><strong>The freeholder offers a role.</strong> Under the list stand the players who are online and hold no
+  role in this settlement, each with the buttons <em>Member</em> and <em>Visitor</em>. A click sends an offer and
+  does nothing else: the freeholder reads <em>“You offered X the role Y in Z. It counts once they accept.”</em></li>
+<li><strong>The role counts once the player accepts it.</strong> They get a line in chat with
+  <em>[Accept]</em> and <em>[Decline]</em> to click; accepting gives them the role at once and their charter screen
+  in place of the card, and a refusal is reported to the freeholder. While an offer is open, the player's line
+  reads <em>invited as …</em> instead of the buttons, and nobody can offer them a second one. <strong>An offer
+  lapses after five minutes</strong>. A role also binds: nobody may attack a
+  settlement they hold a role in — see <a href="../land/attacks.html#who-may-attack-whom">Attacks</a>.</li>
+<li><strong>Leaving and taking away work at once.</strong> A member or visitor leaves with <em>Leave</em> on their
+  own line; the freeholder takes any role but their own with <em>Remove</em>. The player gets a line in chat and
+  from then on sees only the settlement's card.</li>
+<li><strong>To change a role</strong> — a member into a visitor, say — take it away and offer the new one: a role is
+  only offered to a player who holds none in the settlement.</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Message</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>X already holds a role in Y.</td><td>Take it away first to give another</td></tr>
+<tr><td>X already has an open offer from Y.</td><td>Wait for the answer, or for the offer to lapse</td></tr>
+<tr><td>That player is no longer online.</td><td>Offers go only to players who are online</td></tr>
+<tr><td>This offer has lapsed. Ask the owner for a new one.</td><td>Five minutes have passed since the offer</td></tr>
+<tr><td>This offer has already been answered or was not meant for you.</td><td>A second click on the same line, or another player's offer</td></tr>
+<tr><td>The player who made this offer can no longer give out roles in X.</td><td>The one who offered it is no longer the settlement's freeholder</td></tr>
+</tbody>
+</table>
+
+<h2 id="the-card">The card</h2>
+
+<p><strong>A settlement you hold no role in shows you a card instead of its charter screen</strong>, headed
+<em>A settlement you hold no role in</em>. It says the settlement's name and <em>Owner: …</em>. <strong>Right-click the anchor of one of its buildings with an empty
+hand</strong> and the card names that building as well, <em>Building: Watchtower 2</em>; <strong>V</strong> on its
+land opens the same card without a building. Its store, its policies, its build list and its buildings stay
+hidden.</p>
+
+<p><strong>Under a watchtower or the charter stand the lines to attack it</strong>, one for every settlement of
+yours whose soldiers reach it, with the same <strong>−</strong>, <strong>+</strong> and <em>Attack with N</em> as
+on the <em>Attack</em> tab. The line under a charter stays grey while a watchtower of its settlement stands — see
+<a href="../land/attacks.html#launching-an-attack">Attacks</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Getting started</strong>: <a href="../start/first-steps.html">First steps</a> · <a href="../start/founding.html">Founding a settlement</a> · <a href="../start/placing.html">Placing a building</a> · <a href="../start/controls.html">Controls</a> · <strong>The charter screen</strong> · <a href="../start/items-and-blocks.html">Items and blocks</a> · <a href="../start/glossary.html">Glossary</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Residents — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#the-settlement">The settlement</a></p>
+<!-- /generated -->
+<h1>Residents</h1>
+
+<h2 id="how-people-move-in">How people move in</h2>
+
+<p><strong>Your charter brings four people; after that newcomers come on their own, and faster the more
+supplied beds the settlement has.</strong> One newcomer a day comes from the charter alone. Every bed in a
+supplied house — food in its store, and from level 2 fuel in its hearth — adds to the pace, whether it is taken
+or free, and a bed in a house of a higher level counts for more. Every bed of a
+<a href="../land/villages.html">connected village</a> adds as well, the more the better your reputation there.
+As a guide, sixty beds on level 2 bring a little over two newcomers a day. The exact numbers are on the
+<a href="../buildings/charter.html">charter's page</a>.</p>
+
+<p><strong>While a settlement fills its first house, newcomers come four times as fast.</strong> That holds
+as long as the settlement has fewer residents than its charter and its first house have beds — eight at the
+start — so the first house is full in about a day. A server can change the factor, see
+<a href="../admin/gamerules.html">Game rules</a>.</p>
+
+<p><strong>A newcomer from a connected village can be seen walking in</strong>: from the village's bell,
+over the link road and through the gate. If the bed they were coming for is gone by then, they turn back and
+come again later.</p>
+
+<ul>
+<li><strong>Nobody moves in without a fed bed.</strong> A newcomer needs a free bed in a house with food
+  in it, or a free bed in the charter. The overview of the charter screen says how many beds are
+  free.</li>
+<li><strong>From level 2 on, the house needs fuel as well.</strong> A house of level 2 with a cold hearth takes
+  nobody in, see <a href="fire.html">The fire in a building</a>.</li>
+<li><strong>Newcomers are not saved up.</strong> While no such bed is free nobody is on the way, so a house
+  built late does not bring a crowd at once.</li>
+<li><strong>Somebody who has lost their bed comes first.</strong> A resident who had to leave a house
+  takes a free fed bed before any newcomer does.</li>
+</ul>
+
+<h2 id="who-does-what">Who does what</h2>
+
+<p><strong>Every resident is a carrier, a builder, a worker or a soldier.</strong> The overview of the
+charter screen counts each, and those without a post. Whoever holds a post in a watchtower or a barracks is a
+soldier — see <a href="soldiers.html">Soldiers and gear</a>.</p>
+
+<ul>
+<li><strong>Carriers come first.</strong> The settlement keeps one carrier for every four residents, and
+  never fewer than one, before anybody is given a building site or a bench — see
+  <a href="goods.html">Goods and carriers</a>.</li>
+<li><strong>A settlement never loses its last carrier.</strong> If every carrier is gone — moved out of a
+  house without food, say — a builder becomes a carrier at once, or a worker if there is no builder.
+  <strong>A soldier never does.</strong> So a settlement whose food ran out recovers by itself once there is
+  food in the store again: the carrier brings it into the houses, and people move in again.</li>
+<li><strong>Builders come next</strong>, as many as there are builder's posts and as the politics tab
+  lets through — see <a href="../start/charter-screen.html">The charter screen</a>.</li>
+<li><strong>Workers take the free posts that have work</strong>, within reach of where they live — see
+  <a href="#where-people-live">Where people live</a>. When several posts are free, the settlement picks by
+  trade, in an order <strong>you set on the politics tab</strong> — see
+  <a href="../start/charter-screen.html#where-a-free-resident-goes">Where a free resident goes</a>. It starts as
+  the table below, with food first and the tavern last, so a settlement short of hands has a tavern without a
+  keeper, and that tavern stays shut. A post with nothing to do is not taken.</li>
+<li><strong>The order is only for residents without a post.</strong> A worker who already has one is not moved
+  to another.</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>First</th><th>Posts</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Fishing hut, orchard, farm</td></tr>
+<tr><td>2</td><td>Sawmill, toolmaker, charcoal pile, stonemason, windmill, bakery, brewery, smelter, smithy, mine, adit mine</td></tr>
+<tr><td>3</td><td>Forester</td></tr>
+<tr><td>4</td><td>Lumberjack, quarry, opencast quarry, trade post</td></tr>
+<tr><td>5</td><td>The watchtower's guard</td></tr>
+<tr><td>6</td><td>The barracks' soldiers</td></tr>
+<tr><td>7</td><td>The tavern's keeper — bread before beer</td></tr>
+</tbody>
+</table>
+
+<p>A server can change the order the game starts with in <a href="../admin/datapack.html">the datapack</a>.</p>
+
+<h2 id="where-people-live">Where people live</h2>
+
+<p><strong>A worker lives within reach of their post</strong>: at most <strong>64 blocks</strong> between
+the house and the building they work at, in a straight line and ignoring height. Every building with beds
+counts as a house, the charter included. <strong>Carriers and builders need no reach</strong>: they work all
+over the settlement and live wherever a bed is free. A soldier sleeps where they serve. You assign nobody; the
+settlement sorts it out itself.</p>
+
+<ul>
+<li><strong>Whoever already lives somewhere works near home first.</strong> A resident without a post takes
+  one within reach of their house. Only if none is free there do they take one elsewhere, and move. So no
+  quarter runs empty because there is much to do in another.</li>
+<li><strong>A newcomer picks the work first, then the bed near it</strong> — the nearest free bed to that
+  post, in a house with food. If the beds in reach are all taken, a carrier or a builder living there makes
+  room, provided another bed is free for them.</li>
+<li><strong>A worker who lives too far away and finds no bed within reach gives up the post after a
+  day.</strong> That happens when their house is torn down, for instance. Until then the building says that a
+  worker lives too far away.</li>
+<li><strong>Your answer to an empty post is a house nearby.</strong> A post nobody can take from a bed in
+  reach stays empty, and the building says why: either no house stands within reach of it — build one — or, while somebody is out of work, no house within reach has a supplied bed free. Then the houses there are full, and another house or an upgrade
+  helps, or one has beds but no food, and the answer is food. <strong>A post that stays empty without a
+  message is waiting for people</strong>: the settlement is short of hands, and a house does not help. The
+  messages are hints, shown over the building and on the buildings tab — see
+  <a href="stops.html">Messages</a>.</li>
+</ul>
+
+<h2 id="work-jobs-and-beds">Work, jobs and beds</h2>
+
+<ul>
+<li><strong>The people are decoration; the work is not.</strong> Everything below about residents
+  is about what you see, never about what the settlement produces. Walk away and
+  the same planks are sawn at the same moment with nobody there to saw them.</li>
+<li><strong>Nobody changes jobs.</strong> A resident keeps their post for good, unless they live
+  out of its reach — see <a href="#where-people-live">Where people live</a>.</li>
+<li><strong>A post with a bed in the same building keeps it for its own worker.</strong> The guard of a
+  watchtower sleeps in the tower, and one of the charter's four beds belongs to its builder. Losing the post
+  does not cost anyone their bed.</li>
+</ul>
+
+<h2 id="the-people-walking-around">The people walking around</h2>
+
+<p>Residents appear once you are within about 128 blocks of one of the settlement's
+buildings, and they are gone again when you leave. They are figures showing you
+what the settlement is doing — which is why they behave in ways no ordinary mob does:</p>
+
+<ul>
+<li><strong>They cannot be hurt or killed.</strong> Not by you, not by a mob, not by lava.</li>
+<li><strong>A detour costs nothing.</strong> Someone who had to go the long way round starts work late, and
+  the job still ends on time. Wall one in and they step across the obstacle by vanishing over it.</li>
+<li><strong>Work that changes the world happens where it changes it.</strong> The lumberjack
+  stands at the tree as it comes down and the forester over the spot where the sapling appears. Work that
+  changes nothing stays indoors: the sawyer saws at the bench.</li>
+<li><strong>Some workshops have two places to work at</strong>, and the worker moves from one to the other
+  halfway through a job — the smith from the hearth to the anvil, the baker from the trough to the table. On
+  <a href="../buildings/upgrades.html">level 2</a> the bakery, the smithy and the toolmaker have two workers,
+  one at each place.</li>
+<li><strong>Every worker takes two breaks a day</strong> and eats — outside the door, or where they stand if
+  they work outdoors. <strong>A break costs nothing</strong>: no food is used up, and the job takes no
+  longer.</li>
+<li><strong>They hold the tool of their trade while they work</strong>, and swing it. Empty hands
+  mean they are on their way somewhere. The tool that wears out is the one the building holds, not the one in
+  their hand.</li>
+<li><strong>You can hear them work</strong> — wood at the tree, stone at the rock, the saw in the sawmill,
+  the hammer in the smithy. The volume follows the <em>Friendly Creatures</em> slider.</li>
+<li><strong>They open wooden doors and close them behind.</strong> Iron doors they cannot open,
+  which makes an iron door the way to shut a room for good.</li>
+<li><strong>They walk round a finished building, not over it</strong>, unless there is no other way.</li>
+<li><strong>Names and faces are fixed.</strong> Each one keeps the same name and the same vanilla
+  skin for good, the same for everyone on the server. A <a href="../admin/datapack.html#resident-names">datapack</a> can
+  replace both.</li>
+<li><strong>The one carrying something is a carrier, and it holds what it is carrying.</strong>
+  It sets the load down <strong>at the front of the building, where the road meets it</strong>, and never
+  goes inside. Between two trips its hands are empty.</li>
+<li><strong>A carrier pushes its cart only while it is loaded.</strong> On the way to the goods and on the
+  way back its hands are free — the cart still counts all the while, see
+  <a href="goods.html">Goods and carriers</a>.</li>
+<li><strong>A trip is two walks: to the goods, then with them.</strong> A carrier that has just delivered
+  somewhere else walks to the goods first, empty-handed, and you can watch it do it.</li>
+<li><strong>Soldiers and the trader stand at their post</strong> when there is nothing to do, day and night.
+  Soldiers walk a round at night, a torch in hand. The trader walks to the village and back on every trip, and
+  a soldier steps out to meet raiders — see
+  <a href="../buildings/trade-post.html#what-you-see">Trade Post</a> and
+  <a href="../land/raids.html#what-you-see">Raids</a>.</li>
+<li><strong>Nobody sleeps, and where they wait says why.</strong> With no job to do they
+  stand at their <strong>work place</strong> when the hold-up is already being cleared — a tool
+  on its way over — and at their <strong>bed</strong> when it needs you, like a feller with no
+  trees left in reach. A carrier waits where its last delivery left it; at a building that is not a store at most two wait, and the others walk back to the nearest store.</li>
+</ul>
+
+<p>See also: <a href="food.html">Food</a> — the one rule that can make your settlement smaller.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>The settlement</strong>: <strong>Residents</strong> · <a href="../settlement/goods.html">Goods and carriers</a> · <a href="../settlement/goods-list.html">All goods</a> · <a href="../settlement/tools.html">Tools</a> · <a href="../settlement/soldiers.html">Soldiers and gear</a> · <a href="../settlement/stops.html">Messages</a> · <a href="../settlement/fire.html">The fire in a building</a> · <a href="../settlement/food.html">Food</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>

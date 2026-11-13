@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attacks — Freehold Wiki</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav><a href="../index.html">Home</a> · <a href="../index.html#getting-started">Getting started</a> · <a href="../index.html#your-land">Your land</a> · <a href="../index.html#roads">Roads</a> · <a href="../index.html#the-settlement">The settlement</a> · <a href="../buildings/index.html">Buildings</a> · <a href="../index.html#for-server-admins">Server</a> · <a href="../start/glossary.html">Glossary</a></nav>
+<main>
+<!-- generated: trail -->
+<p class="trail"><a href="../index.html">Home</a> › <a href="../index.html#your-land">Your land</a></p>
+<!-- /generated -->
+<h1>Attacks</h1>
+
+<p>An attack is one settlement sending its <a href="../settlement/soldiers.html">soldiers</a> against a
+<a href="../buildings/watchtower.html">watchtower</a> of another — or against its
+<a href="../buildings/charter.html">charter</a>, once that settlement has no watchtower left that has had a guard. <strong>A tower that
+falls changes hands with its land; a charter that falls ends its settlement.</strong> A server can switch attacks
+off — see <a href="../admin/gamerules.html">Game rules</a>.</p>
+
+<!-- generated: conquest -->
+<table>
+<tbody>
+<tr><th>Reach</th><td>a watchtower or barracks within 96 blocks of the target, anchor to anchor</td></tr>
+<tr><th>March</th><td>1 block a second; the fight begins when the farthest soldier has arrived, 30 s to 96 s after the attack</td></tr>
+<tr><th>Grace</th><td>no attack on a settlement for 10 days from its founding</td></tr>
+<tr><th>Shield</th><td>no attack on a conquered watchtower for 1 day</td></tr>
+</tbody>
+</table>
+<!-- /generated -->
+
+<h2 id="who-may-attack-whom">Who may attack whom</h2>
+
+<p><strong>The freeholder and the members of a settlement may attack out of it, and only a settlement in which
+they hold no role.</strong> A member of another settlement cannot attack it, not even out of their own.
+Settlements of the same freeholder never attack each other.</p>
+
+<ul>
+<li><strong>A watchtower can be attacked once its first guard has taken the post</strong>, and from then on even
+  when the post stands empty. A site cannot, and neither can a finished tower that has never had a guard; it is not
+  listed on the tab <em>Attack</em>.</li>
+<li><strong>The charter can be attacked only once no watchtower of its settlement stands that has had a
+  guard.</strong> A tower still waiting for its first guard does not shield it.</li>
+<li><strong>A new settlement is safe for a grace period from its founding</strong>, and a conquered tower for a
+  while after its conquest — both are in the table above. Raiders still come for a conquered tower; only
+  attacks leave it alone.</li>
+</ul>
+
+<h2 id="who-goes">Who goes</h2>
+
+<p><strong>The soldiers of your watchtowers and barracks within reach of the target can go, and every watchtower
+keeps one.</strong> Reach is measured in a straight line from their building to the target, ignoring height. A <a href="../buildings/barracks.html">barracks</a> gives all its soldiers, a watchtower all but
+one — so a watchtower of level 1, with a single post, gives none, and an attack takes a barracks or a tower of
+level 2.</p>
+
+<ul>
+<li><strong>The soldiers of the building nearest the target go first.</strong></li>
+<li><strong>Whoever is fighting a raid, or is already out on an attack, does not go.</strong></li>
+<li><strong>A soldier who goes keeps their post, their bed, their gear and their wounds.</strong> Their post is
+  not filled while they are away, their gear wears on, and they do not fight a raid on their own building
+  until they are back. On the buildings tab they are marked <em>(away on an attack)</em>.</li>
+</ul>
+
+<h2 id="launching-an-attack">Launching an attack</h2>
+
+<p><strong>An attack is launched from an attack line, and there are two ways to it.</strong></p>
+
+<ul>
+<li><strong>Right-click the anchor of a foreign watchtower with an empty hand.</strong> The
+  <a href="../start/charter-screen.html#the-card">card</a> of its settlement opens, and under the tower stands
+  one attack line for every settlement of yours out of which you may attack it. The same goes for a foreign
+  charter, whose line stays grey while a watchtower of its settlement stands that has had a guard.</li>
+<li><strong>The tab <em>Attack</em></strong> on your own charter screen lists every foreign watchtower your
+  soldiers reach and that has had a guard — and a charter, once no such tower of its settlement stands — the
+  nearest first. It reads
+  <em>“No foreign watchtower stands in reach of your watchtowers and barracks.”</em> when there is none.</li>
+</ul>
+
+<p><strong>The line says who, from where, and how many can go</strong> — <em>“Watchtower 2 of Y, from X: 3 soldiers
+can go, 64 blocks away.”</em> — and under it are <strong>−</strong>, <strong>+</strong> and <em>Attack with
+1</em>. One soldier is set to begin with. <strong>An attack once launched cannot be called back.</strong></p>
+
+<p><strong>A line that cannot be used is grey and says why:</strong></p>
+
+<ul>
+<li><em>“Attacks between freeholds are switched off in this world.”</em></li>
+<li><em>“Freeholds of the same owner never attack each other.”</em></li>
+<li><em>“The charter can only be attacked once no watchtower of its freehold stands that has ever had a
+  guard.”</em></li>
+<li><em>“A new freehold: no attack on it for 2:40 h more.”</em> — the grace period</li>
+<li><em>“Conquered a short while ago: no attack on it for 45:10 min more.”</em> — the shield after a conquest</li>
+<li><em>“No soldier in reach can go: every watchtower keeps one, and nobody fights twice.”</em></li>
+<li><em>“That many soldiers cannot go.”</em></li>
+<li><em>“You hold a role in Y and cannot attack it.”</em></li>
+<li><em>“Only the owner and the members of X may attack out of it.”</em></li>
+</ul>
+
+<h2 id="the-march-and-the-fight">The march and the fight</h2>
+
+<p><strong>The soldiers march to the target, and the fight begins when the farthest of them has arrived</strong> —
+never sooner than the shortest lead in the table above.</p>
+
+<ul>
+<li><strong>The fight is fought in duels, as in a <a href="raids.html#how-a-raid-is-fought">raid</a></strong>, one
+  attacker against one defender on each of several duel places at once, and the attacker strikes first. The
+  winner stays on their place for the next opponent.</li>
+<li><strong>A watchtower is defended by its own soldiers</strong>, then by those of every watchtower and barracks
+  of its settlement whose reach takes it in, the nearest first. <strong>The charter is defended by the barracks
+  in reach.</strong></li>
+<li><strong>Without a defender, the attack is won with the first blow.</strong></li>
+<li><strong>Whoever falls is lost with their gear</strong>, on either side.</li>
+</ul>
+
+<p><strong>After the fight, the attackers return home</strong>, won or lost: each takes as long as they took to get
+there. On the way they do not heal and fight no raid. <strong>An attack plunders nothing</strong> — a lost one
+costs the attacker only their fallen.</p>
+
+<h2 id="a-conquered-watchtower">A conquered watchtower</h2>
+
+<p><strong>The attacker who wins takes the watchtower, and one soldier moves in.</strong> One of the attackers
+still standing takes a post in the tower and lives there, with their gear and their wounds; their old post comes
+free, and the settlement fills it, and any other post of the tower, like any other.
+The goods in the tower's stacks go to the store of the settlement that lost it. The tower takes the next
+watchtower <a href="../buildings/index.html#building-numbers">number</a> of the settlement that conquered it.
+Its blocks stay as they stand: if the conqueror builds in another <a href="../admin/themes.html">theme</a>, the
+tower counts as standing in an <a href="boundary.html#what-the-settlement-repairs">older version of its
+drawing</a> until it is lifted.</p>
+
+<p><strong>The land that only the tower held goes with it.</strong> Land that the charter or another watchtower of
+the defender also holds stays with the defender — <strong>except the chunks the conquered tower stands on</strong>:
+those always go with the tower, even where the defender's charter or another of their towers held them too, and
+leave a hole in the defender's land. A conquered tower never stands on the land of its old owner. Only a chunk the
+defender's charter itself stands on stays theirs.</p>
+
+<p><strong>What the defender had standing on the land that changed hands is torn down, and nothing of it comes
+back.</strong></p>
+
+<ul>
+<li><strong>Every building, site and upgrade</strong> on that land falls as if the defender had torn it down — but
+  none of its cost is returned. Only what lay in its stacks and in its people's hands goes to their store. Those
+  who worked there look for another post; those who lived there look for another bed, and move out if there is
+  none.</li>
+<li><strong>A building that falls in a fight burns down.</strong> The flames are only a picture: nothing
+  catches fire and nothing spreads.</li>
+<li><strong>Every road stretch</strong> that touches that land falls the same way, and so do the roads that ended
+  at the conquered tower. What is left of a road on the defender's own land stays theirs.</li>
+<li><strong>A <a href="../buildings/village-gate.html">village gate</a></strong> on that land ends its
+  connection.</li>
+</ul>
+
+<p><strong>The conqueror gets the land empty</strong>, and draws their own roads on it. The march stones of both
+settlements move to their new edges, and the villages near them are found again — see
+<a href="boundary.html">Boundary and protection</a>.</p>
+
+<h2 id="the-end-of-a-settlement">The end of a settlement</h2>
+
+<p><strong>When the charter falls, its settlement ends.</strong> Every building and road of it is torn down with
+nothing returned — the buildings burn down together, as above — its residents move out, its store is lost, every role in it lapses and every village connection
+ends. Raids and attacks on it end without a fight. Nobody moves in.</p>
+
+<ul>
+<li><strong>Its land falls to the settlements around it</strong> that had to leave it out, as when a
+  <a href="../buildings/watchtower.html">watchtower</a> is torn down.</li>
+<li><strong>It no longer counts</strong> against the number of settlements a server lets one player own.</li>
+<li>Its players read <em>“X has fallen with its charter and is no more.”</em></li>
+</ul>
+
+<h2 id="how-you-hear-of-it">How you hear of it</h2>
+
+<p><strong>Two lines in the chat for every attack</strong>, to everybody with a role in either settlement, as
+for a raid and with the same switch <em>Raids in chat</em>:</p>
+
+<ul>
+<li>when it is launched: <em>“X attacks the Watchtower 2 of Y with 3 soldiers.”</em></li>
+<li>when it ends: <em>“X took the Watchtower 2 of Y. 1 attacker fell, and 2 defenders.”</em>, <em>“Y fought off the
+  attack of X. 3 attackers fell, and 2 defenders.”</em>, <em>“X took the charter of Y. Y is no more.”</em>, or
+  <em>“The attack of X on Y has been called off; its soldiers return home.”</em> when the server switches attacks off
+  during the march.</li>
+</ul>
+
+<p><strong>The defender sees a marker over the target</strong>, like a raid marker — <em>“Attack: 3
+soldiers”</em> — with the same switch <em>Raid markers</em>.</p>
+
+<p><strong>The overview of the charter screen</strong> shows every attack under way, one of yours or one against
+you, with its target and how long until the fight or how it stands — <em>“X attacks our Watchtower 2 with 3
+soldiers; the fight in 45 s.”</em>, <em>“Our attack on the Watchtower 2 of Y: 2 soldiers on the march, the fight in
+1:10 min.”</em> — and the last attack with how it ended. In its grace period it says <em>“No attack can come for 6
+more days.”</em> On the buildings tab a conquered tower says how long its shield lasts: <em>“No attack on it for
+45:10 min more.”</em></p>
+
+<h2 id="what-you-see">What you see</h2>
+
+<p><strong>If you stand near enough, an attack is a scene</strong>, but the outcome is settled before you see it:
+the figures show it, they do not decide it.</p>
+
+<ul>
+<li><strong>The attackers walk</strong> from their buildings to the target, one block a second, with their gear.</li>
+<li><strong>The defenders gather at the duel places</strong> in front of the target, as against a raid, and the
+  first attackers march straight to theirs.</li>
+<li><strong>The duels show blows whose outcome is already fixed</strong>; whoever falls falls over.</li>
+<li><strong>After the fight</strong> the survivors return home.</li>
+</ul>
+
+<p>See also: <a href="raids.html">Raids</a>, <a href="../settlement/soldiers.html">Soldiers and gear</a>,
+<a href="../buildings/watchtower.html">Watchtower</a>, <a href="../buildings/barracks.html">Barracks</a>,
+<a href="boundary.html">Boundary and protection</a>.</p>
+
+<!-- generated: navbox -->
+<nav class="navbox">
+<p><strong>Your land</strong>: <a href="../land/boundary.html">Boundary and protection</a> · <a href="../land/villages.html">Villages</a> · <a href="../land/raids.html">Raids</a> · <strong>Attacks</strong> · <a href="../buildings/watchtower.html">Watchtower</a></p>
+</nav>
+<!-- /generated -->
+</main>
+</body>
+</html>
